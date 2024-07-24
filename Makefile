@@ -6,13 +6,13 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/24 13:02:41 by eduaserr          #+#    #+#              #
-#    Updated: 2024/07/24 20:16:27 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/07/24 21:05:49 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ### COMPILATION ###
 NAME	= push_swap
-LIBFT	= Libft/
+LIBFT	= Libft
 CHECKER = checker
 INCLUDE = -L ./Libft -lft
 
@@ -23,11 +23,11 @@ RM		= rm -f
 ### SRC , OBJ ###
 SRCS	= src/
 SRCS_PS = src/push_swap.c
-#SRCS_BON = src/checker/checker_bonus.c
+SRCS_BON = src/checker/checker_bonus.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_PS = $(SRCS_PS:.c=.o)
-#OBJS_BON = $(SRCS_BON:.c=.o)
+OBJS_BON = $(SRCS_BON:.c=.o)
 
 ### RULES ###
 all : $(NAME)
