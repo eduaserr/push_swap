@@ -6,7 +6,7 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/24 13:02:41 by eduaserr          #+#    #+#              #
-#    Updated: 2024/07/24 16:39:51 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/07/24 20:16:27 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,21 +32,26 @@ OBJS_PS = $(SRCS_PS:.c=.o)
 ### RULES ###
 all : $(NAME)
 
-$(NAME)	: $(OBJS) $(OBJS_PS)
+$(NAME)	:$(OBJS_PS) $(OBJS)
 	@make -C $(LIBFT)
 	@ar rcs $(NAME) $(OBJS)
+	@$(CC) $(FLAGS) $(OBJS_PS) $(OBJS) -o $(NAME) $(INCLUDE)
 	@ranlib $(NAME)
 	@echo "Compiled succesfully"
+
+bonus: $(OBJS) $(OBJS_BON)
 
 %.o : %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@$(RM) $(OBJS)
+	@$(RM) $(OBJS_PS) $(OBJS) $(OBJS_BON)
+	@make clean -C $(LIBFT)
 
 fclean: clean
-	@$(RM) $(NAME)
+	@$(RM) $(NAME) $(CHECKER)
+	@make fclean -C $(LIBFT)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
