@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:16 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/25 16:47:09 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/07/25 19:24:09 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 
 int main(int argc,char **argv)
 {
-	t_data data;
-
-	init_data(argc, argv, &data, true);
+	char	**nbr;
+	t_list	*a;
+	t_list	*b;
+	
+	if (argc > 1)
+	init_data(argc, argv);
 }
