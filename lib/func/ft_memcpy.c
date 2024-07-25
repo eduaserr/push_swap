@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 12:40:16 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/25 13:56:54 by eduaserr         ###   ########.fr       */
+/*   Created: 2024/04/16 11:35:49 by eduaserr          #+#    #+#             */
+/*   Updated: 2024/07/25 13:26:24 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/libft.h"
-#include "../inc/push_swap.h"
+#include "../libft.h"
 
-int main(int argc,char **argv)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	
+	unsigned char	*p1;
+	unsigned char	*p2;
+	int				i;
+
+	i = 0;
+	p1 = (unsigned char *)dst;
+	p2 = (unsigned char *)src;
+	if (!dst && !src)
+		return (dst);
+	while (n-- > 0)
+	{
+		p1[i] = p2[i];
+		i++;
+	}
+	return (dst);
 }

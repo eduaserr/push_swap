@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 12:40:16 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/25 13:56:54 by eduaserr         ###   ########.fr       */
+/*   Created: 2024/04/16 11:36:39 by eduaserr          #+#    #+#             */
+/*   Updated: 2024/07/25 13:27:15 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/libft.h"
-#include "../inc/push_swap.h"
+#include "../libft.h"
 
-int main(int argc,char **argv)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	
+	size_t	i;
+
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	if (i >= n)
+		return (0);
+	return ((unsigned char )s1[i] - (unsigned char )s2[i]);
 }

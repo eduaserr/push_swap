@@ -6,25 +6,26 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/24 13:02:41 by eduaserr          #+#    #+#              #
-#    Updated: 2024/07/24 21:05:49 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/07/25 14:00:37 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ### COMPILATION ###
 NAME	= push_swap
-LIBFT	= Libft
+LIBFT	= lib/
 CHECKER = checker
-INCLUDE = -L ./Libft -lft
+INCLUDE = -L ./lib -lft
 
 CC		= clang
 CFLAGS	= -Wall -Wextra -Werror
 RM		= rm -f
 
-### SRC , OBJ ###
-SRCS	= src/
+### SRC ###
+SRCS	=
 SRCS_PS = src/push_swap.c
 SRCS_BON = src/checker/checker_bonus.c
 
+### OBJ ###
 OBJS = $(SRCS:.c=.o)
 OBJS_PS = $(SRCS_PS:.c=.o)
 OBJS_BON = $(SRCS_BON:.c=.o)

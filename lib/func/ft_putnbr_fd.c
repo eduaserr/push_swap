@@ -1,19 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 12:40:16 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/25 13:56:54 by eduaserr         ###   ########.fr       */
+/*   Created: 2024/05/07 11:30:38 by eduaserr          #+#    #+#             */
+/*   Updated: 2024/07/25 13:26:52 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/libft.h"
-#include "../inc/push_swap.h"
+#include "../libft.h"
 
-int main(int argc,char **argv)
+void	ft_putnbr_fd(int n, int fd)
 {
-	
+	long	num;
+	char	*base;
+
+	base = "0123456789";
+	num = (long)n;
+	if (num < 0)
+	{
+		ft_putchar_fd('-', fd);
+		num = num * -1;
+	}
+	if (num <= 9)
+		ft_putchar_fd(base[num], fd);
+	if (num > 9)
+	{
+		ft_putnbr_fd(num / 10, fd);
+		ft_putnbr_fd(num % 10, fd);
+	}
 }

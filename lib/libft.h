@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:40:57 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/23 14:03:56 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/07/25 12:33:10 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+
+// INCLUDE FOR FT_PRINTF
+# include <stdarg.h>
+
+// INCLUDE FOR GET_NEXT_LINE
+# include <fcntl.h>
 
 typedef struct s_list
 {
@@ -230,7 +236,7 @@ char	*ft_strdup(const char *s1);
  * @param len 
  * @return (char*) Returns the substring. NULL if malloc fails.
  */
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_substr(char const *s, ssize_t start, ssize_t len);
 
 /**
  * @brief return the new string, formed by the concatenation of 's1' and 's2'.
@@ -321,7 +327,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
  * @return (size_t) Returns the number of characters that precede the
      terminating NULL character.
  */
-size_t	ft_strlen(const char *s);
+ssize_t	ft_strlen(const char *s);
 
 /**
  * @brief Using malloc, generates a string that represents the value received
@@ -387,5 +393,77 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+/* FT_PRINTF FOLDER */
+
+# define INT_BASE "0123456789"
+# define HEX_UPP_BASE "0123456789ABCDEF"
+# define HEX_LOW_BASE "0123456789abcdef"
+
+/**
+ * @brief Prints character and increments count.
+ * 
+ * @param c
+ * @param count count bytes printed by printf function.
+ */
+void	ft_putchar_pf(char c, int *count);
+
+/**
+ * @brief Prints numbers in decimal base. It puts too numbers in
+ * hexadecimal base.
+ * 
+ * @param nbr
+ * @param count count bytes printed by printf function.
+ */
+void	ft_putnbr_pf(long long nbr, char *base, int *count);
+
+/**
+ * @brief Prints a string.
+ * 
+ * @param str
+ * @param count count bytes printed by printf function.
+ */
+void	ft_putstr_pf(char *str, int *count);
+
+/**
+ * @brief Prints a pointer in hexadecimal base, adding "0x" before.
+ * 
+ * @param nbr
+ * @param count count bytes printed by printf function.
+ */
+void	ft_putptr_pf(unsigned long long nbr, int *count);
+
+/**
+ * @brief Chooses what type of variable is going to print.
+ * 
+ * @param lst
+ * @param str
+ * @param count count bytes printed by printf function.
+ * @return (int)
+ */
+int		ft_fillformat_pf(va_list lst, char str, int *count);
+
+/**
+ * @brief Recreates printf function.
+ * 
+ * @param str
+ * @param ...
+ * @return (int)
+ */
+int		ft_printf(char const *str, ...);
+
+/* GET_NEXT_LINE FOLDER */
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+char	*ft_free_str(char **str);
+
+char	*ft_substr_gnl(char *str, ssize_t start, ssize_t len);
+
+char	*ft_strjoin_gnl(char *s1, char *s2);
+
+char	*get_next_line(int fd);
 
 #endif

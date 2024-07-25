@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 12:40:16 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/25 13:56:54 by eduaserr         ###   ########.fr       */
+/*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
+/*   Updated: 2024/07/25 12:42:36 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/libft.h"
-#include "../inc/push_swap.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-int main(int argc,char **argv)
-{
-	
-}
+# include <stdarg.h>
+# include <stdlib.h>
+# include <limits.h>
+# include <unistd.h>
+
+#endif

@@ -6,7 +6,7 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 14:05:06 by eduaserr          #+#    #+#              #
-#    Updated: 2024/07/24 20:21:49 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/07/25 13:32:18 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,20 +16,20 @@ CC	= clang
 CFLAGS	= -Wall -Wextra -Werror
 RM	= rm -f
 
-### SRCS & OBJS ###
-SRCS	= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_toupper.c ft_tolower.c ft_putchar_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_putendl_fd.c\
-		ft_memset.c ft_bzero.c ft_calloc.c ft_memchr.c ft_memcpy.c ft_memmove.c ft_memcmp.c\
-		ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strnstr.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_striteri.c\
-		ft_atoi.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_itoa.c ft_split.c\
+### SRCS ###
+SRCS	= func/ft_isalnum.c func/ft_isalpha.c func/ft_isascii.c func/ft_isdigit.c func/ft_isprint.c func/ft_toupper.c func/ft_tolower.c func/ft_putchar_fd.c func/ft_putnbr_fd.c func/ft_putstr_fd.c func/ft_putendl_fd.c\
+		func/ft_memset.c func/ft_bzero.c func/ft_calloc.c func/ft_memchr.c func/ft_memcpy.c func/ft_memmove.c func/ft_memcmp.c\
+		func/ft_strchr.c func/ft_strrchr.c func/ft_strncmp.c func/ft_strnstr.c func/ft_strdup.c func/ft_substr.c func/ft_strjoin.c func/ft_strtrim.c func/ft_strmapi.c func/ft_striteri.c\
+		func/ft_atoi.c func/ft_strlcat.c func/ft_strlcpy.c func/ft_strlen.c func/ft_itoa.c func/ft_split.c\
 
-BONUS	= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c\
-		ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c\
+BONUS	= func/ft_lstnew_bonus.c func/ft_lstadd_front_bonus.c func/ft_lstsize_bonus.c func/ft_lstlast_bonus.c func/ft_lstadd_back_bonus.c\
+		func/ft_lstdelone_bonus.c func/ft_lstclear_bonus.c func/ft_lstiter_bonus.c func/ft_lstmap_bonus.c\
 
-PF_SRCS	= ft_printf/ft_printf_utils.c ft_printf/ft_printf.c
+PF_SRCS	= ft_printf/ft_printf.c ft_printf/ft_funlibft_pf.c
 
-GNL_SRCS = get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
+GNL_SRCS = Get_Next_line/get_next_line_bonus.c Get_Next_line/get_next_line_utils_bonus.c
 
-
+### OBJS ###
 PF_OBJS = $(PF_SRCS:.c=.o)
 GNL_OBJS = $(GNL_SRCS:.c=.o)
 OBJS	= $(SRCS:.c=.o) $(PF_OBJS) $(GNL_OBJS)

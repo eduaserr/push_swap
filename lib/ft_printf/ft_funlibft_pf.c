@@ -6,21 +6,11 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 18:43:02 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/28 19:44:10 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/07/25 13:29:02 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-
-size_t	ft_strlen_pf(char *str)
-{
-	int	i;
-
-	i = -1;
-	while (str[++i])
-		;
-	return (i);
-}
+#include "../libft.h"
 
 void	ft_putchar_pf(char c, int *count)
 {
@@ -40,12 +30,12 @@ void	ft_putnbr_pf(long long nbr, char *base, int *count)
 		ft_putchar_pf('-', count);
 		nbr *= -1;
 	}
-	if (nbr < (int)ft_strlen_pf(base))
+	if (nbr < (int)ft_strlen(base))
 		ft_putchar_pf(base[nbr], count);
 	else
 	{
-		ft_putnbr_pf(nbr / ft_strlen_pf(base), base, count);
-		ft_putnbr_pf(nbr % ft_strlen_pf(base), base, count);
+		ft_putnbr_pf(nbr / ft_strlen(base), base, count);
+		ft_putnbr_pf(nbr % ft_strlen(base), base, count);
 	}
 }
 
@@ -64,10 +54,10 @@ void	ft_putptr_pf(unsigned long long nbr, int *count)
 	else
 	{
 		ft_putstr_pf("0x", count);
-		if (nbr > ft_strlen_pf(HEX_LOW_BASE))
+		if (nbr > (unsigned long long)ft_strlen(HEX_LOW_BASE))
 		{
-			ft_putnbr_pf(nbr / ft_strlen_pf(HEX_LOW_BASE), HEX_LOW_BASE, count);
-			ft_putnbr_pf(nbr % ft_strlen_pf(HEX_LOW_BASE), HEX_LOW_BASE, count);
+			ft_putnbr_pf(nbr / ft_strlen(HEX_LOW_BASE), HEX_LOW_BASE, count);
+			ft_putnbr_pf(nbr % ft_strlen(HEX_LOW_BASE), HEX_LOW_BASE, count);
 		}
 		else
 			ft_putnbr_pf(nbr, HEX_LOW_BASE, count);
