@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:40:57 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/25 16:35:51 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/07/25 21:46:43 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-	struct s_list	*prev;
 }			t_list;
 /**
  * @brief Function tests for any character for which isalpha(3) or
