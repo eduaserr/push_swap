@@ -6,7 +6,7 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 14:05:06 by eduaserr          #+#    #+#              #
-#    Updated: 2024/07/25 13:32:18 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/07/25 15:52:06 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,6 @@ PF_OBJS = $(PF_SRCS:.c=.o)
 GNL_OBJS = $(GNL_SRCS:.c=.o)
 OBJS	= $(SRCS:.c=.o) $(PF_OBJS) $(GNL_OBJS)
 BONUS_OB = $(BONUS:.c=.o)
-
 
 ### RULES ###
 all : $(NAME)
