@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/25 21:45:17 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/07/29 18:47:00 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,16 @@
 # include <limits.h>
 # include <unistd.h>
 
-typedef struct list
+typedef struct s_stack
 {
-	int		value;
-	int		index;
-	int		cost;
-	int		top;
-	int		mid;
-	int		pos_to_mid;
-	int		bottom;
-	int		*target;
-	t_list	*next;
-	t_list	*prev;
-}		t_list;
+	int				value;
+	int				index;
+	int				top;
+	int				mid;
+	int				bottom;
+	int				*target;
+	struct s_stack	*next;
+	struct s_stack	*prev;
+}		t_stack;
 
 #endif
