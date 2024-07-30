@@ -6,11 +6,12 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:21:56 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/30 20:18:37 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/07/30 21:18:14 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.c"
+#include "../lib/libft.h"
+#include "../inc/push_swap.h"
 
 void	ft_check(int argc, char **argv, char **nbr, t_stack *a)
 {

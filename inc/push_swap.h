@@ -6,14 +6,13 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/30 13:15:14 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/07/30 20:54:59 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "libft.h"
 # include <stdarg.h>
 # include <limits.h>
 
@@ -28,5 +27,19 @@ typedef struct s_stack
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }		t_stack;
+
+int		main(int argc,char **argv);
+
+void	ft_check(int argc, char **argv, char **nbr, t_stack *a);
+
+void	get_numbers(int argc, char **argv, char **nbr);
+
+void	check_numbers(char **nbr);
+
+long	ft_atol_ps(const char *str);
+
+void	init_data(int argc, char **argv,char **nbr);
+
+void	p_error();
 
 #endif

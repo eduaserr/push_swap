@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:16 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/30 20:23:56 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/07/30 21:17:47 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@
 int main(int argc,char **argv)
 {
 	char	**nbr;
-	t_list	*a;
-	t_list	*b;
+	t_stack	*a;
+	t_stack	*b;
 
 	a = NULL;
 	b = NULL;
 	nbr = 0;
 	if (argc > 1)
 	{
-		ft_check(argc, argv, nbr);
+		ft_check(argc, argv, nbr, a);
 		init_data(argc, argv, nbr);
 	}
 	return (0);
