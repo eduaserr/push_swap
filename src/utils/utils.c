@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 12:40:16 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/30 20:23:56 by eduaserr         ###   ########.fr       */
+/*   Created: 2024/07/30 17:48:30 by eduaserr          #+#    #+#             */
+/*   Updated: 2024/07/30 18:01:04 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/libft.h"
-#include "../inc/push_swap.h"
+#include "push_swap.c"
 
-int main(int argc,char **argv)
+long	ft_atol_ps(const char *str)
 {
-	char	**nbr;
-	t_list	*a;
-	t_list	*b;
+	long	i;
+	long	j;
+	long	sign;
+	long	number;
 
-	a = NULL;
-	b = NULL;
-	nbr = 0;
-	if (argc > 1)
+	i = 0;
+	sign = 1;
+	number = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		ft_check(argc, argv, nbr);
-		init_data(argc, argv, nbr);
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
 	}
-	return (0);
+	j = i;
+	while (ft_isdigit(str[i]))
+	{
+		number *= 10 + str[i] - 48;
+		i++;
+	}
+	if (str[i] || i == j)
+		p_error();
+	return (number * sign);
 }
