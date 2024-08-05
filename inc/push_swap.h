@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/30 20:54:59 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/05 20:09:12 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@ int		main(int argc,char **argv);
 
 void	ft_check(int argc, char **argv, char **nbr, t_stack *a);
 
-void	get_numbers(int argc, char **argv, char **nbr);
-
-void	check_numbers(char **nbr);
+char	**get_numbers(char **nbr);
 
 long	ft_atol_ps(const char *str);
 

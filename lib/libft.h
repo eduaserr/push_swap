@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:40:57 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/25 21:46:43 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/05 20:07:56 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,22 @@ typedef struct s_list
 	struct s_list	*next;
 }			t_list;
 /**
- * @brief Function tests for any character for which isalpha(3) or
-	isdigit(3) is true. 
+ * @brief Function tests for any character for which isalpha or
+	isdigit is true. 
  * 
  * @param a 
  * @return (int) Returns zero if the character tests false and returns
 	non-zero if tests true.
  */
 int		ft_isalnum(int a);
+/**
+ * @brief Tests for any character for which isspace is true. 
+ * 
+ * @param a 
+ * @return (int) Returns zero if the character tests false and returns
+	non-zero if tests true.
+ */
+int		ft_isspace(int a);
 
 /**
  * @brief Tests for any character for which isupper or islower is true. 
