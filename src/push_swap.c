@@ -6,14 +6,14 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:16 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/06 12:20:14 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/06 19:28:19 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib/libft.h"
 #include "../inc/push_swap.h"
 
-int main(int argc,char **argv)
+int main(int argc, char **argv)
 {
 	char	**nbr;
 	t_stack	*a;
@@ -24,8 +24,9 @@ int main(int argc,char **argv)
 	nbr = 0;
 	if (argc > 1)
 	{
-		ft_check_input(argc, argv, nbr, a);
-		init_data(argc, argv, nbr);
+		ft_check_input(argc, argv, nbr);
+		init_data(nbr, &a);
+		sort();
 	}
 	return (0);
 }
