@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:16 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/07/30 21:17:47 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/06 12:20:14 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main(int argc,char **argv)
 	nbr = 0;
 	if (argc > 1)
 	{
-		ft_check(argc, argv, nbr, a);
+		ft_check_input(argc, argv, nbr, a);
 		init_data(argc, argv, nbr);
 	}
 	return (0);

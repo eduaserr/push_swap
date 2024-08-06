@@ -6,14 +6,14 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:21:56 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/05 19:37:00 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/06 12:26:40 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib/libft.h"
 #include "../inc/push_swap.h"
 
-void	ft_check(int argc, char **argv, char **nbr, t_stack *a)
+void	ft_check_input(int argc, char **argv, char **nbr, t_stack *a)
 {
 	int	i;
 
@@ -46,7 +46,7 @@ char	**get_numbers(char **nbr)
 	{
 		j = i + 1;
 		ft_atol_ps(nbr[i]);
-		while (nbr[j])
+		while (nbr[j])				// check repeat
 		{
 			if(nbr[i] == nbr[j])
 				p_error();
