@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:16 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/08 16:48:53 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/08 19:54:29 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int main(int argc, char **argv)
 {
 	char	**nbr;
-	long	*n;
+	long	n;
 	t_stack	*a;
 	t_stack	*b;
 
