@@ -6,14 +6,14 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:21:56 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/06 19:27:18 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/08 18:06:38 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib/libft.h"
 #include "../inc/push_swap.h"
 
-void	ft_check_input(int argc, char **argv, char **nbr)
+void	ft_check_input(int argc, char **argv, char **nbr, long n)
 {
 	int	i;
 
@@ -22,41 +22,34 @@ void	ft_check_input(int argc, char **argv, char **nbr)
 	{
 		if (argc == 2)
 		{
-			if (!argv[1][0] || (argv[1][0] == '-'
-				|| argv[1][0] == '+') && !argv[1][1])
+			if (!argv[1][0] || ((argv[1][0] == '-'
+				|| argv[1][0] == '+') && !argv[1][1]))
 				p_error();
 			nbr = ft_split(argv[1], ' ');
-			nbr = get_numbers(nbr[i]);
+			if (!nbr)
+				p_error();
 		}
 		else
-		{
-			nbr = get_numbers(argv[i]);
-		}
+			nbr = ft_split(argv[i], ' ');
+			if (!nbr)
+				p_error();
+		get_nbrs(nbr, n);
 		i++;
-		//if (argc == 2)
-		//	array_free(nbr);
+		free_array(nbr);
+		nbr = NULL;
 	}
 }
 
-char	**get_numbers(char **nbr)
+void	**get_nbrs(char **nbr, long n)
 {
 	int		i;
-	int		j;
 
-	i = 0;
-	while (nbr[i])
+	i = -1;
+	while (nbr[++i])
 	{
-		j = i + 1;
-		ft_atol_ps(nbr[i]);
-		while (nbr[j])				// check repeat
-		{
-			if (ft_atol_ps(nbr[i]) == ft_atol_ps(nbr[j])
-				|| (ft_atol_ps(nbr[i]) > INT_MAX)
-					|| (ft_atol_ps(nbr[j]) < INT_MIN))
+		n = ft_atol_ps(nbr[i]);
+		if ((n < INT_MIN || n > INT_MAX)
+			|| (nbr[i + 1] && n == ft_atol_ps(nbr[i + 1])))
 				p_error();
-			j++;
-		}
-		i++;
 	}
-	return (nbr);
 }
