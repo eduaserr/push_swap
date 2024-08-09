@@ -1,54 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print.c                                            :+:      :+:    :+:   */
+/*   utils_stack.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/30 14:18:46 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/09 15:47:10 by eduaserr         ###   ########.fr       */
+/*   Created: 2024/08/09 15:21:05 by eduaserr          #+#    #+#             */
+/*   Updated: 2024/08/09 15:22:13 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib/libft.h"
 #include "../inc/push_swap.h"
 
-void	p_error()
+t_stack	*ft_lstlast_ps(t_stack *stack)
 {
-	ft_putstr_fd("Error", 2);
-	exit(EXIT_FAILURE);
-}
-
-void	*free_array(char ***str)
-{
-	int i;
-
-	i = -1;
-	while (str[++i])
-		free(str[i]);
-	free(str);
-}
-
-void	*free_stack(t_stack **stack)
-{
-	t_stack	*node;
-	t_stack	*swp;
-
-	if (!(stack))
+	if (!stack)
 		return (NULL);
-	node = *stack;
-	while (node)
-	{
-		swp = node->next;
-		node->value = 0;
-		node->index = 0;
-		node->top = 0;
-		node->mid = 0;
-		node->bottom = 0;
-		if (node->target)
-			node->target = NULL;
-		free(node);
-		node = swp;
-	}
-	*stack = NULL;
+	while (stack->next)
+		stack = stack->next;
+	return (stack);
+}
+
+t_stack	*ft_lstnew_ps(t_stack *stack, long n)
+{
+	t_stack	*new_node;
+
+	new_node = (t_stack *)malloc(sizeof(t_stack));
+	if (!new_node)
+		return (NULL);
+	new_node->value = n;
+	new_node->next = NULL;
+	return (new_node);
 }

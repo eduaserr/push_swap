@@ -6,14 +6,14 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:21:56 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/08 21:10:51 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/09 14:16:58 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib/libft.h"
 #include "../inc/push_swap.h"
 
-void	ft_check_input(int argc, char **argv, char **nbr, long n)
+void	ft_check_input(int argc, char **argv, char **nbr, t_stack *a)
 {
 	int	i;
 
@@ -30,22 +30,20 @@ void	ft_check_input(int argc, char **argv, char **nbr, long n)
 				p_error();
 		}
 		else
-		{
-			nbr = ft_split(argv[i], ' ');
-			//nbr = argv[i];
-			if (!nbr)
-				p_error();
-		}
-		get_nbrs(nbr, n);
-		free_array(nbr);
+			nbr = argv + 1;
+		get_nbrs(nbr, &a);
+		if (argc == 2)
+			free_array(nbr);
 		nbr = NULL;
 	}
 }
 
-void	**get_nbrs(char **nbr, long n)
+void	**get_nbrs(char **nbr, t_stack **a)
 {
 	int		i;
+	long	n;
 
+	n = 0;
 	i = -1;
 	while (nbr[++i])
 	{
@@ -53,5 +51,6 @@ void	**get_nbrs(char **nbr, long n)
 		if ((n < INT_MIN || n > INT_MAX)
 			|| (nbr[i + 1] && n == ft_atol_ps(nbr[i + 1])))
 				p_error();
+		init_stack(&a, n);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/08 17:53:58 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/09 15:24:15 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 typedef struct s_stack
 {
-	int				value;
+	long			value;
 	int				index;
 	int				top;
 	int				mid;
@@ -30,15 +30,19 @@ typedef struct s_stack
 
 int		main(int argc, char **argv);
 
-void	ft_check_input(int argc, char **argv, char **nbr, long n);
+void	ft_check_input(int argc, char **argv, char **nbr, t_stack *a);
 
-void	**get_nbrs(char **nbr, long n);
+void	**get_nbrs(char **nbr, t_stack *a);
 
 void	init_stack(t_stack **a, long n);
 
+t_stack	*ft_lstlast_ps(t_stack *stack);
+
+t_stack	*ft_lstnew_ps(t_stack *stack, long n);
+
 long	ft_atol_ps(const char *str);
 
-void	*free_array(char **str);
+void	*free_array(char ***str);
 
 void	p_error();
 
