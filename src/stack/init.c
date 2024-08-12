@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 19:09:11 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/09 15:21:24 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/12 17:13:52 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	init_stack(t_stack **a, long n)
 {
 	t_stack	*new_node;
 
-	new_node = ft_lstnew_ps(*a, n);
+	new_node = ft_lstnew_ps(n);
 	if (!(*a))
 	{
 		new_node->prev = NULL;

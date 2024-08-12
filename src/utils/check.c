@@ -6,14 +6,14 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:21:56 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/09 14:16:58 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/12 18:28:27 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib/libft.h"
 #include "../inc/push_swap.h"
 
-void	ft_check_input(int argc, char **argv, char **nbr, t_stack *a)
+void	ft_check_input(int argc, char **argv, char **nbr, t_stack **a)
 {
 	int	i;
 
@@ -31,7 +31,7 @@ void	ft_check_input(int argc, char **argv, char **nbr, t_stack *a)
 		}
 		else
 			nbr = argv + 1;
-		get_nbrs(nbr, &a);
+		get_nbrs(nbr, a);
 		if (argc == 2)
 			free_array(nbr);
 		nbr = NULL;
@@ -50,7 +50,10 @@ void	**get_nbrs(char **nbr, t_stack **a)
 		n = ft_atol_ps(nbr[i]);
 		if ((n < INT_MIN || n > INT_MAX)
 			|| (nbr[i + 1] && n == ft_atol_ps(nbr[i + 1])))
+			{
+				free_stack(a);
 				p_error();
-		init_stack(&a, n);
+			}
+		init_stack(a, n);
 	}
 }

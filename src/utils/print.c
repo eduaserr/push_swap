@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 14:18:46 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/09 15:47:10 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/09 16:04:45 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,10 @@ void	*free_stack(t_stack **stack)
 		swp = node->next;
 		node->value = 0;
 		node->index = 0;
+		node->cost = 0;
 		node->top = 0;
 		node->mid = 0;
+		node->to_mid = 0;
 		node->bottom = 0;
 		if (node->target)
 			node->target = NULL;

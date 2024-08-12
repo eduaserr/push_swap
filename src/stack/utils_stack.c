@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 15:21:05 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/09 15:22:13 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/12 17:12:56 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_stack	*ft_lstlast_ps(t_stack *stack)
 	return (stack);
 }
 
-t_stack	*ft_lstnew_ps(t_stack *stack, long n)
+t_stack	*ft_lstnew_ps(long n)
 {
 	t_stack	*new_node;
 
