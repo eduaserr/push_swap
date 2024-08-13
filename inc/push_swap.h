@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/12 18:28:37 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/13 12:50:30 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,32 @@ typedef struct s_stack
 	struct s_stack	*prev;
 }		t_stack;
 
+	/*		### push_swap ###	*/
 int		main(int argc, char **argv);
 
+	/*		### stack ###		*/
+			/*	check	*/
 void	ft_check_input(int argc, char **argv, char **nbr, t_stack **a);
 
 void	**get_nbrs(char **nbr, t_stack **a);
-
+			/*	init	*/
 void	init_stack(t_stack **a, long n);
-
+			/*utils_stack*/
 t_stack	*ft_lstlast_ps(t_stack *stack);
 
 t_stack	*ft_lstnew_ps(long n);
 
-void	*free_stack(t_stack **stack);
+int		ft_stacklen(t_stack *stack);
 
+	/*		### sort ###		*/
+			/*	sort	*/
+int		is_sorted(t_stack *stack);
+
+	/*		### utils ###		*/
+			/*	utils	*/
 long	ft_atol_ps(const char *str);
+			/*	print	*/
+void	*free_stack(t_stack **stack);
 
 void	*free_array(char ***str);
 
