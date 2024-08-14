@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/13 12:50:30 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/14 13:41:39 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ typedef struct s_stack
 	int				top;
 	int				mid;
 	int				to_mid;
-	int				bottom;
 	int				*target;
 	struct s_stack	*next;
-	struct s_stack	*prev;
 }		t_stack;
 
 	/*		### push_swap ###	*/
