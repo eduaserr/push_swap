@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/14 13:41:39 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/15 19:14:21 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,12 @@ typedef struct s_stack
 	/*		### push_swap ###	*/
 int		main(int argc, char **argv);
 
+	/*		### sort ###		*/
+			/*	utils_sort	*/
+int		is_sorted(t_stack *stack);
+			/*	sort	*/
+void	sort(t_stack **a, t_stack **b);
 	/*		### stack ###		*/
-			/*	check	*/
-void	ft_check_input(int argc, char **argv, char **nbr, t_stack **a);
-
-void	**get_nbrs(char **nbr, t_stack **a);
 			/*	init	*/
 void	init_stack(t_stack **a, long n);
 			/*utils_stack*/
@@ -45,11 +46,11 @@ t_stack	*ft_lstnew_ps(long n);
 
 int		ft_stacklen(t_stack *stack);
 
-	/*		### sort ###		*/
-			/*	sort	*/
-int		is_sorted(t_stack *stack);
-
 	/*		### utils ###		*/
+			/*	check	*/
+void	ft_check_input(int argc, char **argv, char **nbr, t_stack **a);
+
+void	**get_nbrs(char **nbr, t_stack **a);
 			/*	utils	*/
 long	ft_atol_ps(const char *str);
 			/*	print	*/
