@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/30 13:25:40 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/30 19:42:10 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,25 @@ typedef struct s_stack
 	struct s_stack	*next;
 }		t_stack;
 
+	/*		### operations ###	*/
+			/*	swap	*/
+void	swap(t_stack **stack);
+
+void	sa(t_stack **a);
+
+void	sb(t_stack **b);
+
+void	ss(t_stack **a, t_stack **b);
+
 	/*		### push_swap ###	*/
 int		main(int argc, char **argv);
 
 	/*		### sort ###		*/
-			/*	utils_sort	*/
-int		is_sorted(t_stack *stack);
 			/*	sort	*/
 void	sort(t_stack **a, t_stack **b);
+			/*	utils_sort	*/
+int		is_sorted(t_stack *stack);
+
 	/*		### stack ###		*/
 			/*	init	*/
 void	init_stack(t_stack **a, long n);
@@ -51,13 +62,13 @@ int		ft_stacklen(t_stack *stack);
 void	ft_check_input(int argc, char **argv, char **nbr, t_stack **a);
 
 void	**get_nbrs(char **nbr, t_stack **a);
-			/*	utils	*/
-long	ft_atol_ps(const char *str);
 			/*	print	*/
 void	*free_stack(t_stack **stack);
 
 void	*free_array(char ***str);
 
 void	p_error();
+			/*	utils	*/
+long	ft_atol_ps(const char *str);
 
 #endif
