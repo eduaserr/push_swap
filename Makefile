@@ -6,23 +6,25 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/24 13:02:41 by eduaserr          #+#    #+#              #
-#    Updated: 2024/07/25 14:00:37 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/08/30 13:37:52 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ### COMPILATION ###
 NAME	= push_swap
 LIBFT	= lib/
-CHECKER = checker
-INCLUDE = -L ./lib -lft
+CHECKER	= checker
+INCLUDE	= -L ./lib -lft
 
 CC		= clang
 CFLAGS	= -Wall -Wextra -Werror
 RM		= rm -f
 
 ### SRC ###
-SRCS	=
-SRCS_PS = src/push_swap.c
+SRCS	= src/sort/sort.c src/sort/utils_sort.c \
+			src/stack/init.c src/stack/utils_stack.c \
+			src/utils/check.c src/utils/print.c src/utils/utils.c \
+SRCS_PS	= src/push_swap.c
 SRCS_BON = src/checker/checker_bonus.c
 
 ### OBJ ###
@@ -38,7 +40,7 @@ $(NAME)	:$(OBJS_PS) $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 	@$(CC) $(FLAGS) $(OBJS_PS) $(OBJS) -o $(NAME) $(INCLUDE)
 	@ranlib $(NAME)
-	@echo "Compiled succesfully"
+	@echo "Compiled successfully"
 
 bonus: $(OBJS) $(OBJS_BON)
 
