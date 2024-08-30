@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:21:56 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/14 13:29:08 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/30 13:22:55 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 
 void	ft_check_input(int argc, char **argv, char **nbr, t_stack **a)
 {
-	int	i;
-
-	i = 0;
-	while (++i < argc)
-	{
 		if (argc == 2)
 		{
 			if (!argv[1][0] || ((argv[1][0] == '-'
@@ -37,25 +32,29 @@ void	ft_check_input(int argc, char **argv, char **nbr, t_stack **a)
 			free_array(nbr);
 			nbr = NULL;
 		}
-	}
 }
 
 void	**get_nbrs(char **nbr, t_stack **a)
 {
 	int		i;
+	int		j;
 	long	n;
 
 	n = 0;
 	i = -1;
+	j = 0;
 	while (nbr[++i])
 	{
 		n = ft_atol_ps(nbr[i]);
-		if ((n < INT_MIN || n > INT_MAX)
-			|| (nbr[i + 1] && n == ft_atol_ps(nbr[i + 1])))
-			{
-				free_stack(a);
-				p_error();
-			}
+		while (nbr[++j])
+		{
+			if ((n < INT_MIN || n > INT_MAX)
+				|| (n == ft_atol_ps(nbr[j])))
+				{
+					free_stack(a);
+					p_error();
+				}
+		}
 		init_stack(a, n);
 	}
 }
