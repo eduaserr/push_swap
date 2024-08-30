@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 15:21:05 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/15 13:15:39 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/08/30 13:51:09 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int	ft_stacklen(t_stack *stack)
 {
 	int	i;
 
-	i = 0;
 	if (!stack)
 		return (0);
 	i = 1;
