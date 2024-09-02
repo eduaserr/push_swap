@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/30 14:12:23 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/30 19:34:16 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/02 19:49:47 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 
 void	swap(t_stack **stack)
 {
-	t_stack	**first;
-	t_stack	**second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (!(*stack) || !(*stack)->next)
 		return ;
 	first = *stack;
 	second = (*stack)->next;
-	(*first)->next = (*second)->next;
-	(*second)->next = first;
+	first->next = second->next;
+	second->next = first;
 	*stack = second;
 }
 
