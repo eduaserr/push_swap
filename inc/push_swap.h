@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/30 19:42:10 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/03 15:43:28 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int		main(int argc, char **argv);
 
 	/*		### sort ###		*/
 			/*	sort	*/
-void	sort(t_stack **a, t_stack **b);
+void	sort_algorithm(t_stack *a, t_stack *b);
 			/*	utils_sort	*/
 int		is_sorted(t_stack *stack);
 
