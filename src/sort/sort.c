@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 13:39:55 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/03 15:42:12 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/03 20:03:39 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,12 @@ void	sort_three(t_stack **stack)
 
 	i = 0;
 	limits_stack(&min, &max, *stack);
-	if (min == 1)
-	if (min == 1 || max == 3)
-	if (max == 3)
+	if (max == 1)
+		ra(stack);
+	else if (min == 1 || max == 3)
+		sa(stack);
+	else if (min == 3)
+		rra(stack);
 }
 
 void	sort_big()
