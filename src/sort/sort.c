@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 13:39:55 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/02 21:55:11 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/03 15:42:12 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,20 +50,23 @@ void	sort_three(t_stack **stack)
 
 	i = 0;
 	limits_stack(&min, &max, *stack);
+	if (min == 1)
+	if (min == 1 || max == 3)
+	if (max == 3)
 }
 
 void	sort_big()
 {}
 
-void	sort(t_stack **a, t_stack **b)
+void	sort_algorithm(t_stack *a, t_stack *b)
 {
-	if (is_sorted(*a) && !b)
+	if (is_sorted(a) && !b)
 		return ;
-	if (ft_stacklen(*a) == 2)
-		sa(*a);
-	else if (ft_stacklen(*a) == 3)
-		while (!(is_sorted(*a)))
-			sort_three(a);
-	else if (!is_sorted(*a))
+	if (ft_stacklen(a) == 2)
+		sa(a);
+	else if (ft_stacklen(a) == 3)
+		while (!(is_sorted(a)))
+			sort_three(&a);
+	else if (!is_sorted(a))
 		sort_big();
 }
