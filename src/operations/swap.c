@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/30 14:12:23 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/02 19:49:47 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/03 21:48:02 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,13 @@ void	sa(t_stack **a)
 	ft_printf("sa\n");
 	swap(a);
 }
+
 void	sb(t_stack **b)
 {
 	ft_printf("sb\n");
 	swap(b);
 }
+
 void	ss(t_stack **a, t_stack **b)
 {
 	ft_printf("ss\n");
