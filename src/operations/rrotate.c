@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 20:48:14 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/03 21:52:56 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/04 18:03:37 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,21 @@
 
 void	rrotate(t_stack **stack)
 {
+	t_stack	*last;
+	t_stack	*nd_last;
+
 	if (!(*stack) || !(*stack)->next)
 		return ;
-	
+	last = *stack;
+	nd_last = NULL;
+	while (last->next)
+	{
+		nd_last = last;
+		last = last->next;
+	}
+	nd_last->next = NULL;
+	last->next = *stack;
+	*stack = last;
 }
 
 void	rra(t_stack **a)
