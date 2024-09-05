@@ -6,7 +6,7 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/24 13:02:41 by eduaserr          #+#    #+#              #
-#    Updated: 2024/09/04 20:29:34 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/09/05 19:27:54 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ RM		= rm -f
 SRCS	= src/operations/push.c src/operations/rotate.c src/operations/rrotate.c src/operations/swap.c \
 			src/sort/sort.c src/sort/utils_sort.c \
 			src/stack/init.c src/stack/utils_stack.c \
-			src/utils/check.c src/utils/print.c src/utils/utils.c \
+			src/utils/check.c src/utils/print.c src/utils/utils.c
 SRCS_PS	= src/push_swap.c
 SRCS_BON = src/checker/checker_bonus.c
 
@@ -38,9 +38,7 @@ all : $(NAME)
 
 $(NAME)	:$(OBJS_PS) $(OBJS)
 	@make -C $(LIBFT)
-	@ar rcs $(NAME) $(OBJS)
-	@$(CC) $(FLAGS) $(OBJS_PS) $(OBJS) -o $(NAME) $(INCLUDE)
-	@ranlib $(NAME)
+	@$(CC) $(CFLAGS) $(OBJS_PS) $(OBJS) -o $(NAME) $(INCLUDE)
 	@echo "Compiled successfully"
 
 bonus: $(OBJS) $(OBJS_BON)
