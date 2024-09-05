@@ -6,12 +6,12 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/30 14:12:23 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/03 21:48:02 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/05 21:50:11 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/libft.h"
-#include "../inc/push_swap.h"
+#include "../../lib/libft.h"
+#include "../../inc/push_swap.h"
 
 void	swap(t_stack **stack)
 {

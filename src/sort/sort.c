@@ -6,12 +6,12 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 13:39:55 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/03 20:03:39 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/05 21:50:19 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/libft.h"
-#include "../inc/push_swap.h"
+#include "../../lib/libft.h"
+#include "../../inc/push_swap.h"
 
 void	limits_stack(int *min, int *max, t_stack *stack)
 {

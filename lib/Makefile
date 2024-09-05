@@ -6,7 +6,7 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 14:05:06 by eduaserr          #+#    #+#              #
-#    Updated: 2024/09/05 19:35:55 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/09/05 21:49:04 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,11 +29,8 @@ BONUS	= func/ft_lstnew_bonus.c func/ft_lstadd_front_bonus.c func/ft_lstsize_bonu
 
 PF_SRCS	= ft_printf/ft_printf.c ft_printf/ft_funlibft_pf.c
 
-GNL_SRCS = Get_Next_line/get_next_line_bonus.c Get_Next_line/get_next_line_utils_bonus.c
-
 ### OBJS ###
 PF_OBJS = $(PF_SRCS:.c=.o)
-GNL_OBJS = $(GNL_SRCS:.c=.o)
 OBJS	= $(SRCS:.c=.o) $(PF_OBJS) $(GNL_OBJS)
 BONUS_OB = $(BONUS:.c=.o)
 
@@ -53,10 +50,6 @@ printf: $(PF_OBJS)
 	@$(AR) $(NAME) $(PF_OBJS)
 	@$(RANLIB) $(NAME)
 
-gnl: $(GNL_OBJS)
-	@$(AR) $(NAME) $(GNL_OBJS)
-	@$(RANLIB) $(NAME)
-
 %.o : %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
@@ -70,4 +63,4 @@ re: fclean all
 
 rebonus : fclean bonus
 
-.PHONY: all clean fclean re bonus rebonus printf gnl
+.PHONY: all clean fclean re bonus rebonus printf

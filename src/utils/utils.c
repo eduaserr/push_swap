@@ -6,12 +6,12 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:48:30 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/08 18:21:40 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/05 21:50:50 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/libft.h"
-#include "../inc/push_swap.h"
+#include "../../lib/libft.h"
+#include "../../inc/push_swap.h"
 
 long	ft_atol_ps(const char *str)
 {

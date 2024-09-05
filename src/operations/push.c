@@ -6,12 +6,12 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 20:48:08 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/04 20:16:20 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/05 21:49:56 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/libft.h"
-#include "../inc/push_swap.h"
+#include "../../lib/libft.h"
+#include "../../inc/push_swap.h"
 
 void	push(t_stack **src, t_stack **dst)
 {

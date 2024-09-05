@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:16 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/03 15:41:31 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/05 21:51:19 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
-	nbr = 0;
+	nbr = NULL;
 	if (argc > 1)
 		ft_check_input(argc, argv, nbr, &a);
 	if (!is_sorted(a))
-		sort_algorithm(&a, &b);
+		sort_algorithm(a, b);
 	free_stack(&a);
 	return (0);
 }

@@ -6,10 +6,10 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 17:56:31 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/05 17:56:46 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/05 21:50:14 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/libft.h"
-#include "../inc/push_swap.h"
+#include "../../lib/libft.h"
+#include "../../inc/push_swap.h"
 

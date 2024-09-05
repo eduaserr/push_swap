@@ -6,12 +6,12 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 14:18:46 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/14 13:43:07 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/05 21:52:26 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/libft.h"
-#include "../inc/push_swap.h"
+#include "../../lib/libft.h"
+#include "../../inc/push_swap.h"
 
 void	p_error()
 {
@@ -19,7 +19,7 @@ void	p_error()
 	exit(EXIT_FAILURE);
 }
 
-void	*free_array(char ***str)
+void	free_array(char ***str)
 {
 	int i;
 
@@ -29,13 +29,13 @@ void	*free_array(char ***str)
 	free(str);
 }
 
-void	*free_stack(t_stack **stack)
+void	free_stack(t_stack **stack)
 {
 	t_stack	*node;
 	t_stack	*swp;
 
 	if (!(stack))
-		return (NULL);
+		return ;
 	node = *stack;
 	while (node)
 	{

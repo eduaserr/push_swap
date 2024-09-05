@@ -6,14 +6,14 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:21:56 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/02 16:44:46 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/05 21:51:34 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/libft.h"
-#include "../inc/push_swap.h"
+#include "../../lib/libft.h"
+#include "../../inc/push_swap.h"
 
-void	**get_nbrs(char **nbr, t_stack **a)
+void	get_nbrs(char **nbr, t_stack **a)
 {
 	int		i;
 	int		j;
