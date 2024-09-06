@@ -6,7 +6,7 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/24 13:02:41 by eduaserr          #+#    #+#              #
-#    Updated: 2024/09/05 19:27:54 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/09/06 10:55:28 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ all : $(NAME)
 $(NAME)	:$(OBJS_PS) $(OBJS)
 	@make -C $(LIBFT)
 	@$(CC) $(CFLAGS) $(OBJS_PS) $(OBJS) -o $(NAME) $(INCLUDE)
-	@echo "Compiled successfully"
+	@echo "Push_swap compiled successfully"
 
 bonus: $(OBJS) $(OBJS_BON)
 
