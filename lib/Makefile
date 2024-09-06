@@ -6,7 +6,7 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 14:05:06 by eduaserr          #+#    #+#              #
-#    Updated: 2024/09/05 21:49:04 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/09/06 10:50:11 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ PF_SRCS	= ft_printf/ft_printf.c ft_printf/ft_funlibft_pf.c
 
 ### OBJS ###
 PF_OBJS = $(PF_SRCS:.c=.o)
-OBJS	= $(SRCS:.c=.o) $(PF_OBJS) $(GNL_OBJS)
+OBJS	= $(SRCS:.c=.o) $(PF_OBJS)
 BONUS_OB = $(BONUS:.c=.o)
 
 ### RULES ###
@@ -40,7 +40,7 @@ all : $(NAME)
 $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
 	@$(RANLIB) $(NAME)
-	@echo "Compiled succesfully"
+	@echo "libft compiled successfully"
 
 bonus: $(OBJS) $(BONUS_OB)
 	@$(AR) $(NAME) $(OBJS) $(BONUS_OB)
@@ -49,6 +49,7 @@ bonus: $(OBJS) $(BONUS_OB)
 printf: $(PF_OBJS)
 	@$(AR) $(NAME) $(PF_OBJS)
 	@$(RANLIB) $(NAME)
+	@echo "lib.printf compiled successfully"
 
 %.o : %.c
 	@$(CC) $(CFLAGS) -c $< -o $@

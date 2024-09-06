@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:40:57 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/08/05 20:07:56 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/06 10:48:59 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -459,19 +459,5 @@ int		ft_fillformat_pf(va_list lst, char str, int *count);
  * @return (int)
  */
 int		ft_printf(char const *str, ...);
-
-/* GET_NEXT_LINE FOLDER */
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
-
-char	*ft_free_str(char **str);
-
-char	*ft_substr_gnl(char *str, ssize_t start, ssize_t len);
-
-char	*ft_strjoin_gnl(char *s1, char *s2);
-
-char	*get_next_line(int fd);
 
 #endif
