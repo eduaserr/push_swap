@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 13:39:55 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/06 10:53:59 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/06 18:03:30 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,7 @@ void	sort_three(t_stack **stack)
 {
 	int	min;
 	int	max;
-	int	i;
 
-	i = 0;
 	limits_stack(&min, &max, *stack);
 	if (max == 1)
 		ra(stack);
