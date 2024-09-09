@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/05 21:52:16 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/09 20:11:24 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int		ft_stacklen(t_stack *stack);
 
 	/*		### utils ###		*/
 			/*	check	*/
-void	ft_check_input(int argc, char **argv, char **nbr, t_stack **a);
+void	ft_check_input(int argc, char **argv, t_stack **a);
 
 void	get_nbrs(char **nbr, t_stack **a);
 			/*	print	*/
