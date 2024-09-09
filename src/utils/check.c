@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:21:56 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/09 20:10:25 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/09 21:08:33 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	ft_check_input(int argc, char **argv, t_stack **a)
 	get_nbrs(nbr, a);
 	if (argc == 2)
 	{
-		free_array(&nbr);
+		free_array(nbr);
 		nbr = NULL;
 	}
 }

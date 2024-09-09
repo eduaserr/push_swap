@@ -6,18 +6,17 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 13:15:53 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/09 20:03:44 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/09 21:12:06 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static char	free_split(char **str, int i)
+static void	free_split(char **str, int i)
 {
 	while (--i >= 0)
 		free(str[i]);
 	free(str);
-	return (NULL);
 }
 
 static int	wordcount(char const *s, char c)
