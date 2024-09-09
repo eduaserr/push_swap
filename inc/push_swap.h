@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/09 20:11:24 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/09 20:54:27 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	get_nbrs(char **nbr, t_stack **a);
 			/*	print	*/
 void	free_stack(t_stack **stack);
 
-void	free_array(char ***str);
+void	free_array(char **str);
 
 void	p_error();
 			/*	utils	*/
