@@ -6,20 +6,21 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 13:15:53 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/09 21:12:06 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/10 18:35:07 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static void	free_split(char **str, int i)
+static	char	**free_split(char **str, int i)
 {
 	while (--i >= 0)
 		free(str[i]);
 	free(str);
+	return (NULL);
 }
 
-static int	wordcount(char const *s, char c)
+static	int	wordcount(char const *s, char c)
 {
 	int		n_word;
 	int		i;
@@ -38,37 +39,29 @@ static int	wordcount(char const *s, char c)
 	return (n_word);
 }
 
-void	get_limits_word(const char *s, char c, int *start, int *end)
-{
-	while (s[*start] && s[*start] == c)
-		(*start)++;
-	*end = *start;
-	while (s[*end] && s[*end != c])
-		(*end)++;
-}
-
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
-	int		word_count;
 	int		i;
 	int		start;
 	int		end;
 
 	i = -1;
 	start = 0;
-	if (!s)
+	end = 0;
+	str = ft_calloc(wordcount(s, c) + 1, sizeof(char *));
+	if (!str || !s)
 		return (NULL);
-	word_count = wordcount(s, c);
-	str = ft_calloc(word_count + 1, sizeof(char *));
-	if (!str)
-		return (NULL);
-	while (++i < word_count)
+	while (++i < wordcount(s, c) && s[start])
 	{
-		get_limits_word(s, c, &start, &end);
+		while (s[start] && ft_strchr(s + start, c) == s + start)
+			start++;
+		end = ft_strchr(s + start, c) - s;
+		if (end > ft_strlen(s) || end < 0)
+			end = ft_strlen(s);
 		str[i] = ft_substr(s, start, end - start);
 		if (!str[i])
-			return (free_split(str, i), NULL);
+			return (free_split(str, i));
 		start = end;
 	}
 	str[i] = NULL;
