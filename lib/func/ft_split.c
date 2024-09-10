@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 13:15:53 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/10 18:35:07 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/10 19:01:28 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (++i < wordcount(s, c) && s[start])
 	{
-		while (s[start] && ft_strchr(s + start, c) == s + start)
+		while (s[start] && s[start] == c)
 			start++;
 		end = ft_strchr(s + start, c) - s;
 		if (end > ft_strlen(s) || end < 0)
