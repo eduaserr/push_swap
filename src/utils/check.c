@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:21:56 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/09 21:08:33 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/13 19:02:39 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,11 @@ void	get_nbrs(char **nbr, t_stack **a)
 		j = i;
 		while (nbr[++j])
 		{
-			if ((n < INT_MIN || n > INT_MAX)
-				|| (n == ft_atol_ps(nbr[j])))
-				{
-					free_stack(a);
-					free_array(nbr);
-					p_error();
-				}
+			if (n == ft_atol_ps(nbr[j]))
+			{
+				free_stack(a);
+				p_error();
+			}
 		}
 		init_stack(a, n);
 	}
@@ -42,17 +40,14 @@ void	get_nbrs(char **nbr, t_stack **a)
 
 void	ft_check_input(int argc, char **argv, t_stack **a)
 {
-	char **nbr;
+	char	**nbr;
 
 	nbr = NULL;
 	if (argc == 2)
 	{
-		if (!argv[1][0] || ((argv[1][0] == '-'
-			|| argv[1][0] == '+') && !argv[1][1]))
+		if ((argv[1][0] == '-' || argv[1][0] == '+') && !argv[1][1])
 			p_error();
 		nbr = ft_split(argv[1], ' ');
-		if (!nbr)
-			p_error();
 	}
 	else
 		nbr = argv + 1;

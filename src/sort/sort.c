@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 13:39:55 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/06 18:03:30 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/13 19:08:28 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,5 @@ void	sort_algorithm(t_stack *a, t_stack *b)
 		while (!(is_sorted(a)))
 			sort_three(&a);
 	else if (!is_sorted(a))
-		sort_big();
+		sort_big(&a, &b);
 }
