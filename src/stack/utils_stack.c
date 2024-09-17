@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 15:21:05 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/05 21:50:36 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/17 18:38:14 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,46 @@ int	ft_stacklen(t_stack *stack)
 		i++;
 	}
 	return (i);
+}
+
+t_stack	*max_stack(t_stack *stack)
+{
+	t_stack	*max_node;
+	int		max_value;
+
+	if (!stack)
+		return (NULL);
+	max_node = stack;
+	max_value = stack->value;
+	while (stack->next)
+	{
+		stack = stack->next;
+		if (max_value < stack->value)
+		{
+			max_value = stack->value;
+			max_node = stack;
+		}
+	}
+	return (max_node);
+}
+
+t_stack *min_stack(t_stack *stack)
+{
+	t_stack	*min_node;
+	int		min_value;
+
+	if (!stack)
+		return (NULL);
+	min_node = stack;
+	min_value = stack->value;
+	while (stack->next)
+	{
+		stack = stack->next;
+		if (min_value > stack->value)
+		{
+			min_value = stack->value;
+			min_node = stack;
+		}
+	}
+	return (min_node);
 }

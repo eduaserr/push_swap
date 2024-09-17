@@ -6,14 +6,14 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 13:39:55 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/13 19:14:06 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/17 17:43:07 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib/libft.h"
 #include "../../inc/push_swap.h"
 
-void	limits_stack(int *min, int *max, t_stack *stack)
+static void	limits_stack(int *min, int *max, t_stack *stack)
 {
 	int	i;
 	int	min_value;
@@ -56,8 +56,10 @@ void	sort_three(t_stack **stack)
 		rra(stack);
 }
 
-void	sort_big()
-{}
+void	sort_big(t_stack **a, t_stack **b)
+{
+	sorting_b(a, b);
+}
 
 void	sort_algorithm(t_stack *a, t_stack *b)
 {
