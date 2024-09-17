@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 15:21:05 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/17 18:38:14 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/17 18:47:17 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ t_stack	*max_stack(t_stack *stack)
 	return (max_node);
 }
 
-t_stack *min_stack(t_stack *stack)
+t_stack	*min_stack(t_stack *stack)
 {
 	t_stack	*min_node;
 	int		min_value;

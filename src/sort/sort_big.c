@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 17:56:31 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/17 18:04:26 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/17 18:47:57 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	sorting_b(t_stack *a, t_stack *b)
 	while (stack_len(a) > 3 && !is_sorted(a))
 	{
 		stack_a_targets(a, b);
-		stack_b_targets(a ,b);
+		stack_b_targets(a, b);
 		fill_b_stacks();
 	}
 }
