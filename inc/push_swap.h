@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/18 19:33:20 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/18 20:38:30 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,28 +65,30 @@ int		main(int argc, char **argv);
 
 	/*		### sort ###		*/
 			/*	sort_big	*/
+void	sorting_b(t_stack *a, t_stack *b);
+			/*	sort_cal	*/
 void	stack_a_targets(t_stack *a, t_stack *b);
 
 void	stack_b_targets(t_stack *a, t_stack *b);
+			/*	sort_utils	*/
+int		is_sorted(t_stack *stack);
 
-void	sorting_b(t_stack *a, t_stack *b);
+void	limits_stack(int *min, int *max, t_stack *stack);
+
+void	stack_index_side(t_stack *stack);
+
+t_stack	*stack_set_structure(t_stack *a, t_stack *b);
 			/*	sort	*/
 void	sort_algorithm(t_stack *a, t_stack *b);
 
 void	sort_three(t_stack **stack);
 
 void	sort_big(t_stack **a, t_stack **b);
-			/*	utils_sort	*/
-int		is_sorted(t_stack *stack);
-
-void	stack_index_side(t_stack *stack);
-
-t_stack	*stack_set_structure(t_stack *a, t_stack *b);
 
 	/*		### stack ###		*/
-			/*	init	*/
+			/*	stack_init	*/
 void	init_stack(t_stack **a, long n);
-			/*utils_stack*/
+			/*stack_utils*/
 t_stack	*ft_lstlast_ps(t_stack *stack);
 
 t_stack	*ft_lstnew_ps(long n);
@@ -102,7 +104,7 @@ t_stack	*max_stack(t_stack *stack);
 void	ft_check_input(int argc, char **argv, t_stack **a);
 
 void	get_nbrs(char **nbr, t_stack **a);
-			/*	print	*/
+			/*	errors	*/
 void	free_stack(t_stack **stack);
 
 void	free_array(char **str);

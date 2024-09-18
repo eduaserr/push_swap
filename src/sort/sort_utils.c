@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_sort.c                                       :+:      :+:    :+:   */
+/*   sort_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 20:10:34 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/18 19:11:16 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/18 20:30:02 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,35 @@ int	is_sorted(t_stack *stack)
 		stack = stack->next;
 	}
 	return (1);
+}
+
+void	limits_stack(int *min, int *max, t_stack *stack)
+{
+	int	i;
+	int	min_value;
+	int	max_value;
+
+	i = 1;
+	*min = 1;
+	*max = 1;
+	min_value = stack->value;
+	max_value = stack->value;
+	stack = stack->next;
+	while (stack)
+	{
+		i++;
+		if (min_value > stack->value)
+		{
+			min_value = stack->value;
+			*min = i;
+		}
+		if (max_value < stack->value)
+		{
+			max_value = stack->value;
+			*max = i;
+		}
+		stack = stack->next;
+	}
 }
 
 void	stack_index_side(t_stack *stack)

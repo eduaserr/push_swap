@@ -6,41 +6,15 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 13:39:55 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/17 17:43:07 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/18 20:29:54 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib/libft.h"
 #include "../../inc/push_swap.h"
 
-static void	limits_stack(int *min, int *max, t_stack *stack)
-{
-	int	i;
-	int	min_value;
-	int	max_value;
-
-	i = 1;
-	*min = 1;
-	*max = 1;
-	min_value = stack->value;
-	max_value = stack->value;
-	stack = stack->next;
-	while (stack)
-	{
-		i++;
-		if (min_value > stack->value)
-		{
-			min_value = stack->value;
-			*min = i;
-		}
-		if (max_value < stack->value)
-		{
-			max_value = stack->value;
-			*max = i;
-		}
-		stack = stack->next;
-	}
-}
+//node_to_top_a
+//node_to_top_b
 
 void	sort_three(t_stack **stack)
 {
