@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 20:10:34 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/17 18:48:55 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/18 19:11:16 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,37 @@ int	is_sorted(t_stack *stack)
 		stack = stack->next;
 	}
 	return (1);
+}
+
+void	stack_index_side(t_stack *stack)
+{
+	int	i;
+	int	half;
+
+	i = 0;
+	half = (ft_stacklen(stack) + 1) / 2;
+	while (stack)
+	{
+		stack->index = ++i;
+		stack->mid = half;
+		if (i <= half)
+		{
+			stack->is_upper_side = 1;
+			stack->to_mid = half - i;
+		}
+		else
+		{
+			stack->is_upper_side = 0;
+			stack->to_mid = i - half;
+		}
+		stack = stack->next;
+	}
+}
+
+t_stack	*stack_set_structure(t_stack *a, t_stack *b)
+{
+	stack_index_side(a);
+	stack_index_side(b);
+	stack_a_targets(a, b);
+	return (stack_costs(a, b));
 }
