@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 14:18:46 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/17 18:50:33 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/18 19:55:49 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	free_stack(t_stack **stack)
 		node->value = 0;
 		node->index = 0;
 		node->cost = 0;
-		node->top = 0;
+		node->is_upper_side = 0;
 		node->mid = 0;
 		node->to_mid = 0;
 		if (node->target)
