@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/18 20:51:00 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/19 14:46:11 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_stack
 	int				is_upper_side;
 	int				mid;
 	int				to_mid;
-	int				*target;
+	struct s_stack	*target;
 	struct s_stack	*next;
 }		t_stack;
 

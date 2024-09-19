@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 13:39:55 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/18 20:29:54 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/19 14:20:48 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	sort_three(t_stack **stack)
 
 void	sort_big(t_stack **a, t_stack **b)
 {
-	sorting_b(a, b);
+	sorting_b(*a, *b);
 }
 
 void	sort_algorithm(t_stack *a, t_stack *b)
