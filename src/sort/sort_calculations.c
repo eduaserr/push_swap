@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 20:14:08 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/19 14:47:42 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/19 15:43:43 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	stack_b_targets(t_stack *a, t_stack *b)
 	}
 }
 
-/*void	calculate_costs(t_stack *a, t_stack *target, int a_len, int b_len)
+void	calculate_costs(t_stack *a, t_stack *target, int a_len, int b_len)
 {}
 
 t_stack	*stack_costs(t_stack *a, t_stack *b)
@@ -81,4 +81,4 @@ t_stack	*stack_costs(t_stack *a, t_stack *b)
 		target = a->target;
 		calculate_costs(a, target, a_len, b_len);
 	}
-}*/
+}
