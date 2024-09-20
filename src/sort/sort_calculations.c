@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 20:14:08 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/19 15:43:43 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/20 21:21:54 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,18 @@ void	stack_b_targets(t_stack *a, t_stack *b)
 }
 
 void	calculate_costs(t_stack *a, t_stack *target, int a_len, int b_len)
-{}
+{
+	int	index_a;
+	int index_t;
+
+	index_a = a->index;
+	index_t = target->index;
+	if (a->is_upper_side && (target->is_upper_side
+		|| (index_t - index_a < target->mid)))
+		a->cost = max(a->index, target->index);
+	else if (!a->is_upper_side && !target->is_upper_side
+		|| ())
+}
 
 t_stack	*stack_costs(t_stack *a, t_stack *b)
 {
@@ -75,10 +86,16 @@ t_stack	*stack_costs(t_stack *a, t_stack *b)
 	low_cost = INT_MAX;
 	a_len = ft_stacklen(a);
 	b_len = ft_stacklen(b);
-
 	while (a)
 	{
 		target = a->target;
 		calculate_costs(a, target, a_len, b_len);
+		if (a->cost < low_cost)
+		{
+			low_cost = a->cost;
+			cheapest = a;
+		}
+		a = a->next;
 	}
+	return (cheapest);
 }
