@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 20:14:08 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/20 21:21:54 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/23 20:22:58 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,13 @@ void	calculate_costs(t_stack *a, t_stack *target, int a_len, int b_len)
 	if (a->is_upper_side && (target->is_upper_side
 		|| (index_t - index_a < target->mid)))
 		a->cost = max(a->index, target->index);
-	else if (!a->is_upper_side && !target->is_upper_side
-		|| ())
+	else if (!a->is_upper_side && (!target->is_upper_side
+		|| (index_t + a_len - index_a) > target->mid))
+		a->cost = max(a_len - a->index + 1, b_len - target->index + 1);
+	else if (a->is_upper_side)
+		a->cost = a->index + (b_len - target->index + 1);
+	else
+		a->cost = (a_len - a->index + 1) + target->index;
 }
 
 t_stack	*stack_costs(t_stack *a, t_stack *b)
