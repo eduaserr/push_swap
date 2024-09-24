@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 17:56:31 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/20 21:58:16 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/24 14:40:12 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,30 @@ static void	check_position(t_stack *a, t_stack *move)
 	t_stack	*target;
 
 	target = move->target;
+	if (move->is_upper_side && !(target->is_upper_side))
+	{
+		if (target->index - move->index < target->mid)
+			target->is_upper_side = 1;
+	}
+	else if (!(move->is_upper_side) && target->is_upper_side)
+	{
+		if ((target->index + ft_stacklen(a) - move->index) > target->mid)
+			target->is_upper_side = 0;
+	}
 }
 
 static void	fill_b_stack(t_stack *a, t_stack *b, t_stack *move)
 {
 	check_position(a, move);
+	if (move->is_upper_side && move->target->is_upper_side)
+		while (a != move && b != move->target)
+			rrr(a, b);
+	else if (!(move->is_upper_side && !(move->target->is_upper_side)))
+		while (a != move && b != move->target)
+			rrr(a, b);
+	node_to_top_a();
+	node_to_top_b();
+	pb(a, b);
 }
 
 void	sorting_b(t_stack *a, t_stack *b)

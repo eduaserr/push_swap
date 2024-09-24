@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:40:22 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/19 14:46:11 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/24 15:23:59 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,10 @@ void	stack_index_side(t_stack *stack);
 
 t_stack	*stack_set_structure(t_stack *a, t_stack *b);
 			/*	sort	*/
+void	node_to_top_a(t_stack *move, t_stack *a);
+
+void	node_to_top_b(t_stack *move, t_stack *b);
+
 void	sort_algorithm(t_stack *a, t_stack *b);
 
 void	sort_three(t_stack **stack);

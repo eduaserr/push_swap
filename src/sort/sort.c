@@ -6,15 +6,36 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 13:39:55 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/19 14:20:48 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/24 15:21:24 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib/libft.h"
 #include "../../inc/push_swap.h"
 
-//node_to_top_a
-//node_to_top_b
+node_to_top_a(t_stack *move, t_stack *a)
+{
+	while (a != move)
+	{
+		if (move->is_upper_side)
+			ra(a);
+		else
+			rra(a);
+		stack_index_side(a);
+	}
+}
+
+node_to_top_b(t_stack *move, t_stack *b)
+{
+	while (move != b)
+	{
+		if (move->is_upper_side)
+			rb(b);
+		else
+			rrb(b);
+		stack_index_side(b);
+	}
+}
 
 void	sort_three(t_stack **stack)
 {
@@ -33,6 +54,17 @@ void	sort_three(t_stack **stack)
 void	sort_big(t_stack **a, t_stack **b)
 {
 	sorting_b(*a, *b);
+	if (!is_sorted(*a))
+		sort_algorithm(a, b);
+	while (*b)
+	{
+		stack_index_side(a);
+		stack_index_side(b);
+		stack_b_targets(a, b);
+		node_to_top_a((*b)->target, a);
+		pa(a, b);
+	}
+	node_to_top_a(min_stack(*a), a);
 }
 
 void	sort_algorithm(t_stack *a, t_stack *b)
