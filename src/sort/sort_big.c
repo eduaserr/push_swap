@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 17:56:31 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/24 14:40:12 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/24 15:35:21 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ static void	fill_b_stack(t_stack *a, t_stack *b, t_stack *move)
 	else if (!(move->is_upper_side && !(move->target->is_upper_side)))
 		while (a != move && b != move->target)
 			rrr(a, b);
-	node_to_top_a();
-	node_to_top_b();
+	node_to_top_a(move, a);
+	node_to_top_b(move->target, b);
 	pb(a, b);
 }
 
@@ -51,7 +51,7 @@ void	sorting_b(t_stack *a, t_stack *b)
 		pb(&a, &b);
 	while (ft_stacklen(a) > 3 && !is_sorted(a))
 	{
-		stack_a_targets(a, b);	// puede que sobre, hay uno en stack_set_structure
+		stack_a_targets(a, b);
 		fill_b_stack(a, b, stack_set_structure(a, b));
 	}
 }
