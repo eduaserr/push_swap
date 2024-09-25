@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 14:18:46 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/18 19:55:49 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/09/25 17:04:41 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	p_error(void)
 {
-	ft_putstr_fd("Error", 2);
+	ft_putstr_fd("Error\n", 2);
 	exit(EXIT_FAILURE);
 }
 
