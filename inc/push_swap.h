@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 20:00:33 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/14 19:11:52 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/16 19:00:13 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ void	init_stack(long n, t_stack **a);
 /*	stack_utils	*/
 t_stack	*ft_lstnew_ps(long	content);
 
+t_stack	*ft_lstlast_ps(t_stack *stack);
+
+void	ft_lstadd_back_ps(t_stack **stack, t_stack *node);
+
 /*	### UTILS ###	*/
 /*	utils_error	*/
 void	p_error();
@@ -51,4 +55,6 @@ long	ft_atol_ps(char *str);
 
 /*	### MAIN ###	*/
 int		main(int argc, char **argv);
+
+void	printfullstack(char *str, t_stack *stack);
 #endif

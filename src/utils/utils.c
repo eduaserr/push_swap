@@ -6,11 +6,11 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:48:30 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/10 20:55:39 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/16 16:24:37 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../inc/push_swap.h"
 
 long	ft_atol_ps(char *str)
 {
