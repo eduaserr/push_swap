@@ -6,7 +6,7 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/24 13:02:41 by eduaserr          #+#    #+#              #
-#    Updated: 2024/10/16 16:10:50 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/10/21 17:46:31 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,9 @@ RM		= rm -f
 
 SRCS_PS	= src/main.c
 
-SRCS	= src/stack/stack_init.c src/stack/stack_utils.c \
+SRCS	= src/operations/push.c src/operations/rotate.c src/operations/rrotate.c src/operations/swap.c \
+	src/sort/sort.c src/sort/sort_utils.c \
+	src/stack/stack_init.c src/stack/stack_utils.c \
 	src/utils/utils_error.c src/utils/utils_parse_input.c src/utils/utils.c
 
 SRCS_BON = src/checker/checker_bonus.c

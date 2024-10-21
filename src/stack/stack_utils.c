@@ -6,13 +6,13 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:34:25 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/16 20:04:32 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/17 19:22:23 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 
-t_stack	*ft_lstnew_ps(long	content)
+t_stack	*ft_lstnew_ps(long content)
 {
 	t_stack	*node;
 
@@ -39,6 +39,21 @@ void	ft_lstadd_back_ps(t_stack **stack, t_stack *node)
 		*stack = node;
 	else
 		ft_lstlast_ps(*stack)->next = node;
+}
+
+int	ft_stacklen(t_stack *stack)
+{
+	t_stack	*tmp;
+	int		i;
+
+	i = 0;
+	tmp = stack;
+	while (tmp)
+	{
+		i++;
+		tmp = tmp->next;
+	}
+	return (i);
 }
 
 void	printfullstack(char *str, t_stack *stack)
