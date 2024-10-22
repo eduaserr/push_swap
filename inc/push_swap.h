@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 20:00:33 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/21 17:43:37 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/22 19:41:33 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_stack
 
 /*	### OPERATIONS ###	*/
 /*	push	*/
-void	*push(t_stack **src, t_stack **dst);
+void	push(t_stack **src, t_stack **dst);
 
 void	pa(t_stack *a, t_stack *b);
 
@@ -37,7 +37,7 @@ void	pb(t_stack *a, t_stack *b);
 /*	rotate	*/
 /*	rrotate	*/
 /*	swap	*/
-void	*swap(t_stack **a);
+void	swap(t_stack **a);
 
 void	sa(t_stack *a);
 
@@ -75,6 +75,7 @@ void	ft_free(char **str);
 
 void	ft_freestack(t_stack **stack);
 /*	utils_parse_input	*/
+int		check_args(char *str);
 
 void	get_nbrs_and_check_dup(char **nbr, t_stack **a);
 

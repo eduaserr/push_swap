@@ -6,11 +6,27 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 19:55:55 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/17 14:31:38 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/22 20:19:31 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
+
+int	check_args(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (!str || str[0] == '\0')
+		return (1);
+	while (str[i])
+	{
+		if ((!ft_isspace(str[i])))
+			return (0);
+		i++;
+	}
+	return (1);
+}
 
 void	get_nbrs_and_check_dup(char **nbr, t_stack **a)
 {
@@ -42,9 +58,8 @@ void	parse_input(int argc, char **argv, t_stack **a)
 	nbr = NULL;
 	if (argc == 2)
 	{
-		if ((!argv[1][0]) || ((argv[1][0] == '+' 
-			|| argv[1][0] == '-') && !argv[1][1]))
-			p_error();
+		if (check_args(argv[1]))
+			exit(EXIT_FAILURE);
 		nbr = ft_split(argv[1], ' ');
 	}
 	else
@@ -52,6 +67,7 @@ void	parse_input(int argc, char **argv, t_stack **a)
 	get_nbrs_and_check_dup(nbr, a);
 	if (argc == 2)
 	{
+		
 		ft_free(nbr);
 		nbr = NULL;
 	}

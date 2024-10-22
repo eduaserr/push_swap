@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:36:39 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/21 17:42:04 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/22 16:48:10 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ void	sort_algorithm(t_stack *a, t_stack *b)
 	int	stack_len;
 
 	stack_len = ft_stacklen(a);
-	if (is_sorted(&a) && !b)
-		return (printfullstack("a stack :	", a));
+	if (is_sorted(a) && !b)
+		printfullstack("a stack :	", a);
 	if (stack_len == 2)
 		sa(a);
 	else if (stack_len == 3)
-		while (!is_sorted(&a))
+		while (!is_sorted(a))
 			sort_three(a);
 	else if (stack_len > 3)
-		if (!is_sorted(&a))
+		if (!is_sorted(a))
 			sort_big(a, b);
 }

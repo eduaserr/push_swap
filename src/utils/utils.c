@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:48:30 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/16 16:24:37 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:20:43 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ long	ft_atol_ps(char *str)
 	j = i;
 	while (ft_isdigit(str[i]))
 		number = number * 10 + (str[i++] - '0');
-	if ((str[i] || j == i) || (number < INT_MIN || number > INT_MAX))
+	if ((str[i] != '\0'|| j == i) || (number < INT_MIN || number > INT_MAX))
 		p_error();
 	return (negative * number);
 }

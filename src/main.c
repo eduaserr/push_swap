@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 19:56:56 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/17 19:55:38 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/22 19:40:05 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
-	if (argc > 1)
+	if (argc < 2)
+		return (0);
+	else if (argc > 1)
 	{
 		parse_input(argc, argv, &a);
 	}
-	if (!is_sorted(&a))
+	if (!is_sorted(a))
 		sort_algorithm(a, b);
 	return (0);
 }
