@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:36:39 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/22 16:48:10 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/22 20:39:49 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	sort_three(t_stack *a)
 {
 	if (a)
-		return (printfullstack("a stack :	", a));
+		return (printfullstack("a stack :	\n", a));
 }
 
 void	sort_big(t_stack *a, t_stack *b)
 {
 	if (a || b)
-		return (printfullstack("a stack :	", a), printfullstack("b stack :	", b));
+		return (printfullstack("a stack :	\n", a), printfullstack("b stack :	\n", b));
 }
 
 void	sort_algorithm(t_stack *a, t_stack *b)
@@ -30,7 +30,7 @@ void	sort_algorithm(t_stack *a, t_stack *b)
 
 	stack_len = ft_stacklen(a);
 	if (is_sorted(a) && !b)
-		printfullstack("a stack :	", a);
+		printfullstack("a stack :	\n", a);
 	if (stack_len == 2)
 		sa(a);
 	else if (stack_len == 3)

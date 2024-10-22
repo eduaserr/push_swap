@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:34:25 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/17 19:22:23 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/22 20:42:01 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,15 +61,15 @@ void	printfullstack(char *str, t_stack *stack)
 	t_stack *node;
 
 	if (!stack)
-		ft_printf("NULL");
+		ft_printf("NULL\n");
 	node = stack;
 	ft_printf("%s", str);
 	while (node)
 	{
-		ft_printf("	v %d\n", node->value);
-		ft_printf("		i %d\n", node->index);
-		ft_printf("		c %d\n", node->cost);
-		ft_printf("		uod %d\n", node->is_upper_side);
+		ft_printf("	val %d\n", node->value);
+		ft_printf("		indx %d\n", node->index);
+		ft_printf("		cost %d\n", node->cost);
+		ft_printf("		utod %d\n", node->is_upper_side);
 		ft_printf("		mid %d\n", node->mid);
 		if (node->target)
 			ft_printf("		target val %d\n", node->target->value);
