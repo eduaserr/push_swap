@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 20:00:33 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/22 19:41:33 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/23 14:24:37 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 typedef struct s_stack
 {
-	long			value;
+	int				value;
 	int				index;
 	int				cost;
 	int				mid;
