@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 20:00:33 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/23 14:24:37 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:23:46 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,35 @@ void	pa(t_stack *a, t_stack *b);
 
 void	pb(t_stack *a, t_stack *b);
 /*	rotate	*/
+void	rotate(t_stack **a);
+
+void	ra(t_stack **a);
+
+void	rb(t_stack **b);
+
+void	rr(t_stack **a, t_stack **b);
 /*	rrotate	*/
+void	rrotate(t_stack **a);
+
+void	rra(t_stack **a);
+
+void	rrb(t_stack **b);
+
+void	rrr(t_stack **a, t_stack **b);
 /*	swap	*/
 void	swap(t_stack **a);
 
-void	sa(t_stack *a);
+void	sa(t_stack **a);
 
-void	sb(t_stack *b);
+void	sb(t_stack **b);
 
-void	ss(t_stack *a, t_stack *b);
+void	ss(t_stack **a, t_stack **b);
 
 /*	### SORT ###	*/
 /*	sort_utils	*/
 int		is_sorted(t_stack *a);
 /*	sort	*/
-void	sort_three(t_stack *a);
+void	sort_three(t_stack **a);
 
 void	sort_big(t_stack *a, t_stack *b);
 

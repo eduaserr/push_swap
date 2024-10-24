@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 19:38:59 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/23 20:53:02 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:23:38 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,21 @@ void	swap(t_stack **stack)
 	*stack = tmp;				//segundo nodo a primero
 }
 
-void	sa(t_stack *a)
+void	sa(t_stack **a)
 {
-	swap(&a);
+	swap(a);
 	ft_printf("sa\n");
 }
 
-void	sb(t_stack *b)
+void	sb(t_stack **b)
 {
-	swap(&b);
+	swap(b);
 	ft_printf("sb\n");
 }
 
-void	ss(t_stack *a, t_stack *b)
+void	ss(t_stack **a, t_stack **b)
 {
-	sa(&a);
-	sb(&b);
+	swap(a);
+	swap(b);
 	ft_printf("ss\n");
 }

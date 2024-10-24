@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 19:50:38 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/23 22:04:33 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/24 16:41:26 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,35 @@
 
 void	rrotate(t_stack **stack)
 {
-	t_stack	*tmp;
-	t_stack *nd_last;
+	t_stack	*nd_last;
+	t_stack	*last;
 
-	tmp = *stack;
 	nd_last = *stack;
+	last = ft_lstlast_ps(*stack);
 	while (nd_last->next->next)
+	{
 		nd_last = nd_last->next;
-	ft_lstlast_ps(*stack)->next = tmp;
+	}
+	last->next = *stack;
 	nd_last->next = NULL;
+	*stack = last;
 }
 
-void	rra(t_stack *a)
+void	rra(t_stack **a)
 {
-	rrotate(&a);
+	rrotate(a);
 	ft_printf("rra\n");
 }
 
-void	rrb(t_stack *b)
+void	rrb(t_stack **b)
 {
-	rrotate(&b);
+	rrotate(b);
 	ft_printf("rrb\n");
 }
 
-void	rrr(t_stack *a, t_stack *b)
+void	rrr(t_stack **a, t_stack **b)
 {
-	rrotate(&a);
-	rrotate(&b);
+	rrotate(a);
+	rrotate(b);
 	ft_printf("rrr\n");
 }

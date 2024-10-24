@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 19:39:04 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/23 20:52:42 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/24 12:35:34 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,21 @@ void	rotate(t_stack **stack)
 	tmp->next = NULL;
 }
 
-void	ra(t_stack *a)
+void	ra(t_stack **a)
 {
-	rotate(&a);
+	rotate(a);
 	ft_printf("ra\n");
 }
 
-void	rb(t_stack *b)
+void	rb(t_stack **b)
 {
-	rotate(&b);
+	rotate(b);
 	ft_printf("rb\n");
 }
 
-void	rr(t_stack *a, t_stack *b)
+void	rr(t_stack **a, t_stack **b)
 {
-	rotate(&a);
-	rotate(&b);
+	rotate(a);
+	rotate(b);
 	ft_printf("rr\n");
 }
