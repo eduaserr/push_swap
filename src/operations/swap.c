@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 19:38:59 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/24 14:23:38 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:43:28 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	swap(t_stack **stack)
 	t_stack	*tmp;
 
 	if (!stack || !(*stack))
-		return ; 
-	tmp = (*stack)->next;		//guardamos puntero al segundo nodo
-	(*stack)->next = tmp->next;	//primer nuevo nodo apunta al tercero
-	tmp->next = *stack;			//segundo nodo apunta al primero
-	*stack = tmp;				//segundo nodo a primero
+		return ;
+	tmp = (*stack)->next;
+	(*stack)->next = tmp->next;
+	tmp->next = *stack;
+	*stack = tmp;
 }
 
 void	sa(t_stack **a)
