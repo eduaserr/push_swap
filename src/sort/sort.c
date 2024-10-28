@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:36:39 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/28 15:59:10 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:52:34 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,10 @@ void	sort_three(t_stack **a)
 	if (is_sorted(*a))
 		return ;
 	if ((*a) == max)
-	{
 		ra(a);
-		if (!is_sorted(*a))
-			sa(a);
-	}
 	else if ((*a)->next == max)
-	{
 		rra(a);
-		if (!is_sorted(*a))
-			sa(a);
-	}
-	else if ((*a)->value > (*a)->next->value)
+	if ((*a)->value > (*a)->next->value)
 		sa(a);
 }
 
