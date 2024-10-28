@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 20:00:33 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/28 17:59:27 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/28 21:18:27 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ void	sb(t_stack **b);
 void	ss(t_stack **a, t_stack **b);
 
 /*	### SORT ###	*/
+/*	sort_stack	*/
+void	target_a_nodes(t_stack *a, t_stack *b);
 /*	sort_utils	*/
 int		is_sorted(t_stack *a);
 /*	sort	*/
