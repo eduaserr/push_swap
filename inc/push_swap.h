@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 20:00:33 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/28 15:11:01 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:59:27 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,15 +71,19 @@ void	sort_algorithm(t_stack *a, t_stack *b);
 
 /*	### STACK ###	*/
 /*	stack_init	*/
-void	init_stack(long n, t_stack **a);
-/*	stack_utils	*/
 t_stack	*ft_lstnew_ps(long content);
 
 t_stack	*ft_lstlast_ps(t_stack *stack);
 
 void	ft_lstadd_back_ps(t_stack **stack, t_stack *node);
 
+void	init_stack(long n, t_stack **a);
+/*	stack_utils	*/
 int		ft_stacklen(t_stack *stack);
+
+t_stack	*min_stack(t_stack *stack);
+
+t_stack	*max_stack(t_stack *stack);
 
 /*	### UTILS ###	*/
 /*	utils_error	*/
@@ -96,10 +100,6 @@ void	get_nbrs_and_check_dup(char **nbr, t_stack **a);
 void	parse_input(int argc, char **argv, t_stack **a);
 /*	utils	*/
 long	ft_atol_ps(char *str);
-
-t_stack	*min_stack(t_stack *stack);
-
-t_stack	*max_stack(t_stack *stack);
 
 /*	### MAIN ###	*/
 int		main(int argc, char **argv);
