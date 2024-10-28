@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 20:00:33 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/24 14:23:46 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:11:01 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int		ft_stacklen(t_stack *stack);
 
 /*	### UTILS ###	*/
 /*	utils_error	*/
-void	p_error();
+void	p_error(void);
 
 void	ft_free(char **str);
 
@@ -96,6 +96,10 @@ void	get_nbrs_and_check_dup(char **nbr, t_stack **a);
 void	parse_input(int argc, char **argv, t_stack **a);
 /*	utils	*/
 long	ft_atol_ps(char *str);
+
+t_stack	*min_stack(t_stack *stack);
+
+t_stack	*max_stack(t_stack *stack);
 
 /*	### MAIN ###	*/
 int		main(int argc, char **argv);

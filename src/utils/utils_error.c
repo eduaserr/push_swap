@@ -6,13 +6,13 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:44:27 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/22 19:41:15 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:11:57 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 
-void	p_error()
+void	p_error(void)
 {
 	ft_printf("Error\n");
 	exit(EXIT_FAILURE);

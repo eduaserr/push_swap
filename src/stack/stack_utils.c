@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:34:25 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/24 15:58:27 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:17:04 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	ft_stacklen(t_stack *stack)
 
 void	printfullstack(char *str, t_stack *stack)
 {
-	t_stack *node;
+	t_stack	*node;
 
 	if (!stack)
 		ft_printf("NULL\n");

@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 19:55:55 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/22 20:19:31 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:14:23 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	get_nbrs_and_check_dup(char **nbr, t_stack **a)
 
 void	parse_input(int argc, char **argv, t_stack **a)
 {
-	char **nbr;
+	char	**nbr;
 
 	nbr = NULL;
 	if (argc == 2)
@@ -67,7 +67,6 @@ void	parse_input(int argc, char **argv, t_stack **a)
 	get_nbrs_and_check_dup(nbr, a);
 	if (argc == 2)
 	{
-		
 		ft_free(nbr);
 		nbr = NULL;
 	}
