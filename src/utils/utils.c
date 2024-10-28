@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:48:30 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/28 15:15:52 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:32:30 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,38 +36,4 @@ long	ft_atol_ps(char *str)
 	if ((str[i] != '\0' || j == i) || (number < INT_MIN || number > INT_MAX))
 		p_error();
 	return (negative * number);
-}
-
-t_stack	*min_stack(t_stack *stack)
-{
-	t_stack	*min;
-
-	min = stack;
-	stack = stack->next;
-	while (stack)
-	{
-		if (min->value > stack->value)
-		{
-			min = stack;
-		}
-		stack = stack->next;
-	}
-	return (min);
-}
-
-t_stack	*max_stack(t_stack *stack)
-{
-	t_stack	*max;
-
-	max = stack;
-	stack = stack->next;
-	while (stack)
-	{
-		if (max->value < stack->value)
-		{
-			max = stack;
-		}
-		stack = stack->next;
-	}
-	return (max);
 }

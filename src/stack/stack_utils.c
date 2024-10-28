@@ -6,40 +6,11 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:34:25 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/28 15:17:04 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:32:50 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
-
-t_stack	*ft_lstnew_ps(long content)
-{
-	t_stack	*node;
-
-	node = (t_stack *)malloc(sizeof(t_stack));
-	if (!node)
-		return (NULL);
-	node->value = content;
-	node->next = NULL;
-	return (node);
-}
-
-t_stack	*ft_lstlast_ps(t_stack *stack)
-{
-	if (!stack)
-		return (NULL);
-	while (stack->next)
-		stack = stack->next;
-	return (stack);
-}
-
-void	ft_lstadd_back_ps(t_stack **stack, t_stack *node)
-{
-	if (!(*stack))
-		*stack = node;
-	else
-		ft_lstlast_ps(*stack)->next = node;
-}
 
 int	ft_stacklen(t_stack *stack)
 {
@@ -54,6 +25,39 @@ int	ft_stacklen(t_stack *stack)
 		tmp = tmp->next;
 	}
 	return (i);
+}
+t_stack	*min_stack(t_stack *stack)
+{
+	t_stack	*min;
+
+	min = stack;
+	stack = stack->next;
+	while (stack)
+	{
+		if (min->value > stack->value)
+		{
+			min = stack;
+		}
+		stack = stack->next;
+	}
+	return (min);
+}
+
+t_stack	*max_stack(t_stack *stack)
+{
+	t_stack	*max;
+
+	max = stack;
+	stack = stack->next;
+	while (stack)
+	{
+		if (max->value < stack->value)
+		{
+			max = stack;
+		}
+		stack = stack->next;
+	}
+	return (max);
 }
 
 void	printfullstack(char *str, t_stack *stack)
