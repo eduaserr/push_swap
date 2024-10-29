@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 20:00:33 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/28 21:18:27 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/10/29 18:26:21 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ typedef struct s_stack
 /*	push	*/
 void	push(t_stack **src, t_stack **dst);
 
-void	pa(t_stack *a, t_stack *b);
+void	pa(t_stack **a, t_stack **b);
 
-void	pb(t_stack *a, t_stack *b);
+void	pb(t_stack **a, t_stack **b);
 /*	rotate	*/
 void	rotate(t_stack **a);
 
@@ -61,13 +61,13 @@ void	ss(t_stack **a, t_stack **b);
 
 /*	### SORT ###	*/
 /*	sort_stack	*/
-void	target_a_nodes(t_stack *a, t_stack *b);
+void	a_targets(t_stack *a, t_stack *b);
 /*	sort_utils	*/
 int		is_sorted(t_stack *a);
 /*	sort	*/
 void	sort_three(t_stack **a);
 
-void	sort_big(t_stack *a, t_stack *b);
+void	sort_big(t_stack **a, t_stack **b);
 
 void	sort_algorithm(t_stack *a, t_stack *b);
 
