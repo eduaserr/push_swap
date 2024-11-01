@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:36:39 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/29 18:29:54 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/11/01 21:16:58 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,10 @@ void	sort_big(t_stack **a, t_stack **b)
 		pb(a, b);
 	if (stacklen-- > 3 && !is_sorted(*a))
 		pb(a, b);
-	printfullstack("- pre big a stack :	\n", *a);
-	printfullstack("- pre big b stack :	\n", *b);
 	while (stacklen-- > 3 && !is_sorted(*a))
 	{
-		a_targets(a, b);
-		//index de a
-		//
+		a_targets(*a, *b);
+		cost_analysis(*a, *b);
 	}
 }
 
@@ -62,4 +59,5 @@ void	sort_algorithm(t_stack *a, t_stack *b)
 		if (!is_sorted(a))
 			sort_big(&a, &b);
 	printfullstack("pos sort	\n", a);
+	printfullstack("pos sort	\n", b);
 }

@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 21:16:01 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/29 18:56:37 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/11/01 20:23:40 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,10 @@ void	a_targets(t_stack *a, t_stack *b)
 			a->target = max_stack(b);
 		a = a->next;
 	}
+}
+
+t_stack	*move_to_b(t_stack *a, t_stack *b, t_stack *cheapest)
+{
+	ft_printf("--",a, b, cheapest);
+	return (0);
 }
