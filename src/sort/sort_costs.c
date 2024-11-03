@@ -22,7 +22,7 @@ void	get_index(t_stack *stack)
 	while (stack)
 	{
 		stack->index = i;
-		if (stack->index <= half)
+		if (stack->index < half)
 			stack->is_upper_side = 1;
 		else
 			stack->is_upper_side = 0;
@@ -31,26 +31,24 @@ void	get_index(t_stack *stack)
 	}
 }
 
-void	node_to_top(t_stack *stack)
+void	node_to_top_a(t_stack *a, t_stack *b)
 {
 	int	a_len;
 	int	b_len;
 
-	a_len = ft_stacklen(stack);
-	b_len = ft_stacklen(stack->target);
-	while (stack)
+	a_len = ft_stacklen(a);
+	b_len = ft_stacklen(b);
+	while (a)
 	{
-		stack->cost = stack->index;
-		if (!stack->is_upper_side)
-			stack->cost = a_len - stack->index;
-		if (stack->target->is_upper_side)
-			stack->cost += stack->target->index;
+		a->cost = a->index;
+		if (!a->is_upper_side)
+			a->cost = a_len - a->index;
+		if (a->target->is_upper_side)
+			a->cost += a->target->index;
 		else
-			stack->cost += b_len - stack->target->index;
-		stack = stack->next;
+			a->cost += b_len - a->target->index;
+		a = a->next;
 	}
-	//printfullstack("a ----\n", stack);
-	//printfullstack("b ----\n", stack->target);
 }
 
 t_stack	*cheapest(t_stack *stack)
@@ -71,7 +69,6 @@ void	cost_analysis(t_stack *a, t_stack *b)
 {
 	get_index(a);
 	get_index(b);
-	node_to_top(a);
-	//node_to_top(b);
+	node_to_top_a(a, b);
 //	move_to_b(a, b, cheapest(a)); //revisar
 }

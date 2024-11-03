@@ -73,7 +73,6 @@ void	printfullstack(char *str, t_stack *stack)
 		ft_printf("		indx %d\n", node->index);
 		ft_printf("		cost %d\n", node->cost);
 		ft_printf("		utod %d\n", node->is_upper_side);
-		ft_printf("		mid %d\n", node->mid);
 		if (node->target)
 			ft_printf("		target val %d\n", node->target->value);
 		node = node->next;

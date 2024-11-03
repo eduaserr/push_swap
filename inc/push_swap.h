@@ -62,7 +62,7 @@ void	ss(t_stack **a, t_stack **b);
 /*	sort_costs	*/
 void	get_index(t_stack *stack);
 
-void	node_to_top(t_stack *stack);
+void	node_to_top_a(t_stack *a, t_stack *b);
 
 t_stack	*cheapest(t_stack *stack);
 
