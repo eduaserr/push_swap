@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:51:23 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/11/01 21:20:00 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:48:36 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	get_index(t_stack *stack)
 	}
 }
 
-void	node_to_top_a(t_stack *a, t_stack *b)
+void	calculate_cost(t_stack *a, t_stack *b)
 {
 	int	a_len;
 	int	b_len;
@@ -56,6 +56,7 @@ t_stack	*cheapest(t_stack *stack)
 	t_stack	*cheapest;
 
 	cheapest = stack;
+	stack = stack->next;
 	while (stack)
 	{
 		if (stack->cost < cheapest->cost)
@@ -69,6 +70,6 @@ void	cost_analysis(t_stack *a, t_stack *b)
 {
 	get_index(a);
 	get_index(b);
-	node_to_top_a(a, b);
-//	move_to_b(a, b, cheapest(a)); //revisar
+	calculate_cost(a, b);
+	move_to_b(&a, &b, cheapest(a));
 }

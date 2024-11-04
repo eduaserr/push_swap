@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:36:39 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/11/01 21:16:58 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/11/04 18:10:34 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,17 @@ void	sort_big(t_stack **a, t_stack **b)
 	stacklen = ft_stacklen(*a);
 	if (stacklen-- > 3 && !is_sorted(*a))
 		pb(a, b);
+	ft_printf("stacklen(a) is %d\n", stacklen);
 	if (stacklen-- > 3 && !is_sorted(*a))
 		pb(a, b);
+	ft_printf("stacklen(a) is %d\n", stacklen);
 	while (stacklen-- > 3 && !is_sorted(*a))
 	{
+		ft_printf("stacklen(a) is %d\n", stacklen);
 		a_targets(*a, *b);
 		cost_analysis(*a, *b);
 	}
+	sort_three(a);
 }
 
 void	sort_algorithm(t_stack *a, t_stack *b)
