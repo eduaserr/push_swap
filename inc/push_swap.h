@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 20:00:33 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/11/04 17:33:46 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/11/04 20:10:20 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	ss(t_stack **a, t_stack **b);
 /*	sort_costs	*/
 void	get_index(t_stack *stack);
 
-void	calculate_cost(t_stack *a, t_stack *b);
+void	get_cost(t_stack *a, t_stack *b);
 
 t_stack	*cheapest(t_stack *stack);
 
