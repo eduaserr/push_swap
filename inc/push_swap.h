@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 20:00:33 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/11/04 20:10:20 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/11/05 19:29:00 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,17 @@ void	get_cost(t_stack *a, t_stack *b);
 
 t_stack	*cheapest(t_stack *stack);
 
-void	cost_analysis(t_stack *a, t_stack *b);
+void	cost_analysis(t_stack **a, t_stack **b);
 /*	sort_stack	*/
 void	a_targets(t_stack *a, t_stack *b);
 
+void	b_targets(t_stack *a, t_stack *b);
+
 void	move_to_b(t_stack **a, t_stack **b, t_stack *cheapest);
+
+void	move_to_a(t_stack **a, t_stack **b);
+
+void	minvalue_ontop(t_stack **a);
 /*	sort_utils	*/
 int		is_sorted(t_stack *a);
 /*	sort	*/
@@ -78,7 +84,7 @@ void	sort_three(t_stack **a);
 
 void	sort_big(t_stack **a, t_stack **b);
 
-void	sort_algorithm(t_stack *a, t_stack *b);
+void	sort_algorithm(t_stack **a, t_stack **b);
 
 /*	### STACK ###	*/
 /*	stack_init	*/
