@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 19:50:38 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/24 16:41:26 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/11/05 21:14:45 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ void	rrotate(t_stack **stack)
 	nd_last = *stack;
 	last = ft_lstlast_ps(*stack);
 	while (nd_last->next->next)
-	{
 		nd_last = nd_last->next;
-	}
 	last->next = *stack;
 	nd_last->next = NULL;
 	*stack = last;

@@ -6,7 +6,7 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/24 13:02:41 by eduaserr          #+#    #+#              #
-#    Updated: 2024/11/04 21:15:09 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/11/06 14:37:28 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,6 @@ CFLAGS	= -Wall -Wextra -Werror
 RM		= rm -f
 
 ### SRC ###
-
 SRCS_PS	= src/main.c
 
 SRCS	= src/operations/push.c src/operations/rotate.c src/operations/rrotate.c src/operations/swap.c \

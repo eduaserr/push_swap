@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:54:48 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/28 16:32:04 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:07:45 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_stack	*ft_lstnew_ps(long content)
 	if (!node)
 		return (NULL);
 	node->value = content;
+	node->target = NULL;
 	node->next = NULL;
 	return (node);
 }
@@ -40,7 +41,6 @@ void	ft_lstadd_back_ps(t_stack **stack, t_stack *node)
 	else
 		ft_lstlast_ps(*stack)->next = node;
 }
-
 
 void	init_stack(long n, t_stack **a)
 {

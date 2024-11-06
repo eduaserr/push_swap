@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:34:25 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/10/31 20:10:59 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/11/05 21:20:28 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,7 @@ t_stack	*min_stack(t_stack *stack)
 	while (stack)
 	{
 		if (min->value > stack->value)
-		{
 			min = stack;
-		}
 		stack = stack->next;
 	}
 	return (min);
@@ -51,9 +49,7 @@ t_stack	*max_stack(t_stack *stack)
 	while (stack)
 	{
 		if (max->value < stack->value)
-		{
 			max = stack;
-		}
 		stack = stack->next;
 	}
 	return (max);

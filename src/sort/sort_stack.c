@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 21:16:01 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/11/05 18:49:24 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/11/05 19:57:22 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,6 @@ void	move_to_b(t_stack **a, t_stack **b, t_stack *cheapest)
 	else if (!cheapest->target->is_upper_side)
 		while (cheapest->target != (*b))
 			rrb(b);
-	//get_index(*a);
-	//get_index(*b);
 	pb(a, b);
 }
 
