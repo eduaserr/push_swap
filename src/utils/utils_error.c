@@ -1,46 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rrotate.c                                          :+:      :+:    :+:   */
+/*   utils_error.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 19:50:38 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/11/05 21:14:45 by eduaserr         ###   ########.fr       */
+/*   Created: 2024/10/14 15:44:27 by eduaserr          #+#    #+#             */
+/*   Updated: 2024/11/06 17:13:21 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 
-void	rrotate(t_stack **stack)
+void	p_error(void)
 {
-	t_stack	*nd_last;
-	t_stack	*last;
-
-	nd_last = *stack;
-	last = ft_lstlast_ps(*stack);
-	while (nd_last->next->next)
-		nd_last = nd_last->next;
-	last->next = *stack;
-	nd_last->next = NULL;
-	*stack = last;
+	ft_printf("Error\n");
+	exit(EXIT_FAILURE);
 }
 
-void	rra(t_stack **a)
+void	ft_free(char **str)
 {
-	rrotate(a);
-	ft_printf("rra\n");
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
 }
 
-void	rrb(t_stack **b)
+void	ft_freestack(t_stack **stack)
 {
-	rrotate(b);
-	ft_printf("rrb\n");
-}
+	t_stack	*swp;
 
-void	rrr(t_stack **a, t_stack **b)
-{
-	rrotate(a);
-	rrotate(b);
-	ft_printf("rrr\n");
+	if ((!stack) || (!*stack))
+		return ;
+	while (*stack)
+	{
+		swp = (*stack)->next;
+		if ((*stack)->target)
+			(*stack)->target = NULL;
+		free(*stack);
+		*stack = swp;
+	}
+	*stack = NULL;
 }

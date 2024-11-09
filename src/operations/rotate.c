@@ -5,41 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/03 20:48:10 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/05 21:50:01 by eduaserr         ###   ########.fr       */
+/*   Created: 2024/10/17 19:39:04 by eduaserr          #+#    #+#             */
+/*   Updated: 2024/10/24 12:35:34 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib/libft.h"
 #include "../../inc/push_swap.h"
 
 void	rotate(t_stack **stack)
 {
-	t_stack	*first;
+	t_stack	*tmp;
 
-	if (!(*stack) || !(*stack)->next)
-		return ;
-	first = *stack;
-	ft_lstlast_ps(*stack)->next = first;
-	*stack = (*stack)->next;
-	first->next = NULL;
+	tmp = *stack;
+	ft_lstlast_ps(*stack)->next = tmp;
+	(*stack) = (*stack)->next;
+	tmp->next = NULL;
 }
 
 void	ra(t_stack **a)
 {
-	ft_printf("ra\n");
 	rotate(a);
+	ft_printf("ra\n");
 }
 
 void	rb(t_stack **b)
 {
-	ft_printf("rb\n");
 	rotate(b);
+	ft_printf("rb\n");
 }
 
 void	rr(t_stack **a, t_stack **b)
 {
-	ft_printf("rr\n");
 	rotate(a);
 	rotate(b);
+	ft_printf("rr\n");
 }

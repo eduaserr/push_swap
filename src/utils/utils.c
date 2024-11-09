@@ -6,11 +6,10 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 17:48:30 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/09/13 19:03:34 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/11/05 21:10:12 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib/libft.h"
 #include "../../inc/push_swap.h"
 
 long	ft_atol_ps(char *str)
@@ -34,7 +33,7 @@ long	ft_atol_ps(char *str)
 	j = i;
 	while (ft_isdigit(str[i]))
 		number = number * 10 + (str[i++] - '0');
-	if ((str[i] || j == i) || (number < INT_MIN || number > INT_MAX))
+	if ((str[i] != '\0' || j == i) || (number < INT_MIN || number > INT_MAX))
 		p_error();
 	return (negative * number);
 }
