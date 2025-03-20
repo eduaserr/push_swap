@@ -1,5 +1,5 @@
 <div>
-    <img align="left" alt="Push_Swap" src="https://github.com/eduaserr/42-project-badges/blob/a48e677fd4871e6999a9564101dca26091ec18ef/badges/push_swape.png" width="75px">
+    <img align="left" alt="" src="https://github.com/eduaserr/42-project-badges/blob/a48e677fd4871e6999a9564101dca26091ec18ef/badges/push_swape.png" width="75px">
     <h1 align="center"> ~PUSH_SWAP~ <br><img alt="success 100/100" src="https://img.shields.io/badge/100%2F100-green?style=plastic&logoColor=green&label=success"></h1>
 </div>
 <p align="center">A number sorting algorithm project using stacks.<br></p>
