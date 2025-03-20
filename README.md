@@ -121,3 +121,48 @@ In a big list of numbers to order, it may be hard to count the number of movemen
     ```
 
 This will display the number of lines in the output, which corresponds to the number of operations needed to sort the numbers.
+
+---
+## 🎯 **Fun Tips & Tricks** 💡
+*Why do we set pointers to `NULL` after using `free`?
+It isn't strictly necessary, but it's a good practice. Setting a pointer to `NULL` ensures that if we try to access it after freeing, we won't accidentally access invalid memory.*
+
+#### Strings free function
+
+```c
+	char	*ft_free_str(char **str)
+	{
+		free(*str); //free's memory allocated by str pointer.
+		*str = NULL; // Set the pointer to NULL to avoid accidental access
+		return (NULL);
+	}
+```
+
+#### Arrays free function
+
+
+```c
+	void	ft_freemap(char ***map)
+	{
+		int	i;
+
+		if (map && *map) // Verify if the pointer and its content are not NULL
+		{
+			i = 0;
+			while ((*map)[i]) // Free each element of the array
+			{
+				free((*map)[i]);
+				i++;
+			}
+		free(*map); // Free the array itself
+		*map = NULL; // Set the pointer to NULL to avoid accidental access
+		}
+	}
+```
+
+## 🔍 What did we learn here?
+- Freeing memory: Use free to release dynamically allocated memory.
+
+- Assigning NULL after freeing: Prevents accidental access to freed memory.
+
+- Using a double pointer (**): Allows modifying the original pointer from within the function.
